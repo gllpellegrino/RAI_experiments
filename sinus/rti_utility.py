@@ -165,17 +165,20 @@ def restimate_md(md, path):
     stvs = {sta: [] for sta in md}
     # now we start collecting those values
     for window in windows_getter(path):
-        sta = 0
+        sta, cvl = 0, 0.
         for vl in window:
-            stvs[sta].add(vl)
+            cvl = 0.
             # move to the next state
             for _, ds, lg, rg in md[sta]["t"]:
                 if lg < vl <= rg:
                     sta = ds
+                    cvl = vl
                     break
+        stvs[sta].append(cvl)
     # now we can reestimate
     for sta in md:
-        md[sta]["p"] = sum(stvs[sta]) / float(len(stvs[sta]))
+        print sta, len(stvs[sta])
+        md[sta]["p"] = sum(stvs[sta]) / float(len(stvs[sta])) if stvs[sta] else 0.
     # ready to return
     return md
 
@@ -184,7 +187,13 @@ if __name__ == "__main__":
     # m = load_time_md("/home/nino/PycharmProjects/rai_experiments/sinus/data/0/rtitm.rti")
     # print m
     # export_md(m, "/home/nino/LEMMA/state_merging_regressor/experiments/sinus/0/rtitm.dot")
-    p = "/home/nino/PycharmProjects/rai_experiments/sinus/data/0/train.flat"
+    p = "/home/nino/PycharmProjects/rai_experiments/sinus/data/0/rtisy.dot"
+    f = "/home/nino/PycharmProjects/rai_experiments/sinus/data/0/train.flat"
     # for v in windows_getter(p):
     #     print v
-    #m = restimate_md(m, p)
+    import dot_utility as du
+    m = du.load_md(p)
+    print m
+    m = restimate_md(m, f)
+    print m
+    du.export_md(m, "/home/nino/PycharmProjects/rai_experiments/sinus/data/0/canc.dot")

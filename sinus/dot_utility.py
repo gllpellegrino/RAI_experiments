@@ -11,8 +11,7 @@ import re
 
 
 STATE_RE = r'(-?\d+) \[shape=circle, label=\"(-?\d+)\\n(\S+)\"\];'
-# @todo ha ancora dei problemi questa
-TRANS_RE = r'(-?\d+)->(-?\d+) \[ label=\"\](\S+), (\S+)\]|\[\"\];'
+TRANS_RE = r'\t(-?\d+)->(-?\d+) \[ label=\"\](\S+), (\S+)(\]|\[)\"\];'
 
 
 # loader of automata stored in dot format
@@ -32,12 +31,12 @@ def load_md(path):
                 else:
                     rt[sta] = {"p": pr, "t": []}
             md = trp.match(line)
-            print line, md
             if md is not None:
                 sr = int(md.group(1))
                 ds = int(md.group(2))
                 lg = -float("inf") if "Infinity" in md.group(3) else float(md.group(3))
-                rg = float("inf") if "Infinity" in md.group(3) else float(md.group(3))
+                rg = float("inf") if "Infinity" in md.group(4) else float(md.group(4))
+                print ">", line, lg, rg
                 if ds not in rt:
                     rt[ds] = {"p": 0., "t": []}
                 # we skip transitions to the sink state (id: -1)
