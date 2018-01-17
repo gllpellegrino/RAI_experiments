@@ -51,6 +51,8 @@ def setup():
     # 4) generate train file for RTI+ with alphabet criterion
     # 5) generate train file for RTI+ with time criterion
     for tc in mt.TCIDS:
+        print "setting up test case", tc
+        # setting the base directory for test case tc
         tcdir = mt.BASEDIR + "/" + str(tc)
         # creating the test case directory
         if not exists(tcdir):
