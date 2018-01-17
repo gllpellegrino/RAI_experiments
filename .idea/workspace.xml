@@ -2,57 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66c9db45-2388-4e50-853e-88ea47bf58de" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/sinus/data/0/rai.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/0/rtisy.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/0/rtisy.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/0/rtitm.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/0/rtitm.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/1/rai.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/1/rtisy.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/1/rtisy.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/1/rtitm.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/1/rtitm.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/2/rai.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/2/rtisy.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/2/rtisy.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/2/rtitm.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/2/rtitm.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/3/rai.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/3/rtisy.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/3/rtisy.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/3/rtitm.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/3/rtitm.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/4/rai.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/4/rtisy.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/4/rtisy.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/4/rtitm.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/4/rtitm.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/5/rai.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/5/rtisy.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/5/rtisy.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/5/rtitm.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/5/rtitm.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/6/rai.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/6/rtisy.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/6/rtisy.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/6/rtitm.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/6/rtitm.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/7/rai.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/7/rtisy.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/7/rtisy.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/7/rtitm.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/7/rtitm.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/8/rai.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/8/rtisy.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/8/rtisy.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/8/rtitm.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/8/rtitm.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/9/rai.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/9/rtisy.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/9/rtisy.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/9/rtitm.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/9/rtitm.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sinus/dot_utility.py" afterPath="$PROJECT_DIR$/sinus/dot_utility.py" />
+      <change beforePath="$PROJECT_DIR$/sinus/learn.py" afterPath="$PROJECT_DIR$/sinus/learn.py" />
       <change beforePath="$PROJECT_DIR$/sinus/rti_utility.py" afterPath="$PROJECT_DIR$/sinus/rti_utility.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,20 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="setup.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sinus/setup.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="77" column="11" lean-forward="false" selection-start-line="77" selection-start-column="11" selection-end-line="77" selection-end-column="11" />
-              <folding>
-                <element signature="e#375#392#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -94,9 +31,9 @@
         <option value="$PROJECT_DIR$/sinus/setup.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/sinus/meta.py" />
+        <option value="$PROJECT_DIR$/sinus/dot_utility.py" />
         <option value="$PROJECT_DIR$/sinus/learn.py" />
         <option value="$PROJECT_DIR$/sinus/rti_utility.py" />
-        <option value="$PROJECT_DIR$/sinus/dot_utility.py" />
       </list>
     </option>
   </component>
@@ -143,6 +80,20 @@
               <item name="sinus" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="rai_experiments" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rai_experiments" type="462c0819:PsiDirectoryNode" />
+              <item name="sinus" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rai_experiments" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rai_experiments" type="462c0819:PsiDirectoryNode" />
+              <item name="sinus" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="6" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -173,7 +124,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.setup">
+  <component name="RunManager" selected="Python.learn">
     <configuration name="dot_utility" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -254,10 +205,10 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.setup" />
-        <item index="1" class="java.lang.String" itemvalue="Python.rti_utility" />
-        <item index="2" class="java.lang.String" itemvalue="Python.dot_utility" />
-        <item index="3" class="java.lang.String" itemvalue="Python.learn" />
+        <item index="0" class="java.lang.String" itemvalue="Python.learn" />
+        <item index="1" class="java.lang.String" itemvalue="Python.setup" />
+        <item index="2" class="java.lang.String" itemvalue="Python.rti_utility" />
+        <item index="3" class="java.lang.String" itemvalue="Python.dot_utility" />
       </list>
     </recent_temporary>
   </component>
@@ -303,7 +254,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -346,7 +299,7 @@
         <state relative-caret-position="450">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
-            <element signature="e#143#160#0" expanded="false" />
+            <element signature="e#141#158#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -355,9 +308,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3168">
           <caret line="176" column="9" lean-forward="false" selection-start-line="176" selection-start-column="9" selection-end-line="176" selection-end-column="9" />
-          <folding>
-            <element signature="e#131#148#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -390,16 +341,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sinus/learn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <element signature="e#143#160#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -474,20 +415,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sinus/rti_utility.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11">
-          <caret line="174" column="28" lean-forward="false" selection-start-line="174" selection-start-column="28" selection-end-line="174" selection-end-column="28" />
-          <folding>
-            <element signature="e#131#148#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sinus/meta.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="385">
           <caret line="61" column="79" lean-forward="false" selection-start-line="61" selection-start-column="79" selection-end-line="61" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sinus/learn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="60" column="31" lean-forward="false" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="31" />
+          <folding>
+            <element signature="e#141#158#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sinus/data/2/rai.dot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sinus/data/2/rtitm.dot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sinus/data/6/rtisy.dot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sinus/rti_utility.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="178" column="18" lean-forward="false" selection-start-line="178" selection-start-column="18" selection-end-line="178" selection-end-column="18" />
           <folding />
         </state>
       </provider>

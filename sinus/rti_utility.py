@@ -177,7 +177,6 @@ def restimate_md(md, path):
         stvs[sta].append(cvl)
     # now we can reestimate
     for sta in md:
-        print sta, len(stvs[sta])
         md[sta]["p"] = sum(stvs[sta]) / float(len(stvs[sta])) if stvs[sta] else 0.
     # ready to return
     return md

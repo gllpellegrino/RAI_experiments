@@ -2,16 +2,15 @@
 
 __author__ = 'Gaetano "Gibbster" Pellegrino'
 
-
 """
 Automata learning utility.
 It may call RTI+ rather than RAI.
 """
 
-
 import meta as mt
 import os
 import rti_utility as rtu
+import dot_utility as dtu
 
 
 # only cleans the files produced by learn()
@@ -41,13 +40,16 @@ def learn():
         cmd = mt.RAI_CMD.format(TRAIN=raitr, MODEL=raimd, ALPHABET_SIZE=mt.ASIZE, PREFIX_LENGTH=mt.WSIZE / 2)
         os.system(cmd)
         # second we learn RTI+ model with alphabet
+        flatr = tcdir + "/train.flat"
+        # -------------------------------------------
         rtitr = tcdir + "/rtisy.sw"
         rtiou = tcdir + "/rtisy.rti"
         rtimd = tcdir + "/rtisy.dot"
-        cmd = mt.RTI_CMD.format(TRAIN = rtitr, MODEL=rtiou)
+        cmd = mt.RTI_CMD.format(TRAIN=rtitr, MODEL=rtiou)
         os.system(cmd)
         m = rtu.load_alpha_md(rtiou)
-        rtu.export_md(m, rtimd)
+        m = rtu.restimate_md(m, flatr)
+        dtu.export_md(m, rtimd)
         # third we learn RTI+ model with time
         rtitr = tcdir + "/rtitm.sw"
         rtiou = tcdir + "/rtitm.rti"
@@ -55,7 +57,8 @@ def learn():
         cmd = mt.RTI_CMD.format(TRAIN=rtitr, MODEL=rtiou)
         os.system(cmd)
         m = rtu.load_time_md(rtiou)
-        rtu.export_md(m, rtimd)
+        m = rtu.restimate_md(m, flatr)
+        dtu.export_md(m, rtimd)
 
 
 if __name__ == "__main__":
