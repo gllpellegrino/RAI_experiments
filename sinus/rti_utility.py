@@ -14,8 +14,8 @@ import setup as st
 import re
 
 
-STATE_REGEX = "^(\d+) prob: symbol=(( \d+)+)"
-TRANSITION_REGEX = "^(\d+) (\d+) \[(\d+), (\d+)\]->(-?\d+)\\n$"
+RTI_STATE_RE = "^(-?\d+) prob: symbol=(( \d+)+)"
+RTI_TRANS_RE = "^(-?\d+) (\d+) \[(\d+), (\d+)\]->(-?\d+)\\n$"
 
 
 # utility to export a flat file to RAI sliding window training file
@@ -67,25 +67,27 @@ def export_time_sw(inpath, wsize, oupath):
 # this method loads a model, inferred by RTI+ with alphabet, in memory
 def load_alpha_md(path):
     rt = {}
-    trp = re.compile(TRANSITION_REGEX)
-    stp = re.compile(STATE_REGEX)
+    trp = re.compile(RTI_TRANS_RE)
+    stp = re.compile(RTI_STATE_RE)
     with open(path, "r") as rh:
         for line in rh:
-            m = stp.match(line)
+            md = stp.match(line)
             # state check
-            if m is not None:
-                sta = int(m.group(1))
-                rt[sta] = {"p": 0., "t": []}
-            m = trp.match(line)
-            if m is not None:
-                sr = int(m.group(1))
-                sy = m.group(2)
-                ds = int(m.group(5))
+            if md is not None:
+                sta = int(md.group(1))
+                # we skip the sink state (id:-1)
+                if sta >= 0:
+                    rt[sta] = {"p": 0., "t": []}
+            md = trp.match(line)
+            if md is not None:
+                sr = int(md.group(1))
+                sy = md.group(2)
+                ds = int(md.group(5))
                 # we skip the sink state
                 if ds not in rt and ds > 0:
                     rt[ds] = {"p": 0., "t": []}
                 # and we skip transitions to the sink state
-                if ds > 0:
+                if ds >= 0:
                     tr = (sr, ds, -float("inf"), 0.) if sy == "0" else (sr, ds, 0., float("inf"))
                     rt[sr]["t"].append(tr)
         # extend guards from -inf to inf
@@ -104,25 +106,27 @@ def load_alpha_md(path):
 # this method loads a model, inferred by RTI+ by using time, in memory
 def load_time_md(path):
     rt = {}
-    trp = re.compile(TRANSITION_REGEX)
-    stp = re.compile(STATE_REGEX)
+    trp = re.compile(RTI_TRANS_RE)
+    stp = re.compile(RTI_STATE_RE)
     with open(path, "r") as rh:
         for line in rh:
-            m = stp.match(line)
+            md = stp.match(line)
             # state check
-            if m is not None:
-                sta = int(m.group(1))
-                rt[sta] = {"p": 0., "t": []}
-            m = trp.match(line)
-            if m is not None:
-                sr = int(m.group(1))
-                ds = int(m.group(5))
-                lg = (float(m.group(3)) - 1000.) * pow(10, -mt.PRECISION)
-                rg = (float(m.group(4)) - 1000.) * pow(10, -mt.PRECISION)
+            if md is not None:
+                sta = int(md.group(1))
+                # we skip the sink state (id: -1)
+                if sta >= 0:
+                    rt[sta] = {"p": 0., "t": []}
+            md = trp.match(line)
+            if md is not None:
+                sr = int(md.group(1))
+                ds = int(md.group(5))
+                lg = (float(md.group(3)) - 1000.) * pow(10, -mt.PRECISION)
+                rg = (float(md.group(4)) - 1000.) * pow(10, -mt.PRECISION)
                 if ds not in rt:
                     rt[ds] = {"p": 0., "t": []}
                 # we skip transitions to the sink state (id: -1)
-                if ds > 0:
+                if ds >= 0:
                     tr = (sr, ds, lg, rg)
                     rt[sr]["t"].append(tr)
         # extend guards from -inf to inf
@@ -138,24 +142,49 @@ def load_time_md(path):
     return rt
 
 
-# export a model loaded with load_alpha_md() or load_time_md() into .dot format
-def export_md(rt, path):
-    with open(path, "w") as eh:
-        eh.write("digraph a {")
-        for sta in rt:
-            # we skip the sink
-            ln = "\n" + str(sta) + " [shape=circle, label=\"" + str(sta) + "\\n" + str(rt[sta]["p"]) + "\"];"
-            eh.write(ln)
-            for _, ds, lg, rg in rt[sta]["t"]:
-                # we skip transition to the sink
-                fl = "]" + str(lg) if lg != -float("inf") else "]-Infinity"
-                fr = str(rg) + "]" if rg != float("inf") else "Infinity["
-                ln = "\n\t" + str(sta) + "->" + str(ds) + " [ label=\"" + fl + ", " + fr + "\"];"
-                eh.write(ln)
-        eh.write("\n}")
+# sliding window iterator given a flat file
+def windows_getter(path, wsize=None):
+    if wsize is None:
+        wsize = mt.WSIZE
+    window = []
+    for vl in st.load_flat(path):
+        if len(window) < wsize:
+            window.append(vl)
+        else:
+            yield window
+            window = window[1:] + [vl]
+    # handling last window
+    yield window
+
+
+# estimate state probabilities by using a flat file.
+# it uses the mean value as a predictor in each state.
+# important! it updates the model provided in input.
+def restimate_md(md, path):
+    # this dict contains the values collected in each state
+    stvs = {sta: [] for sta in md}
+    # now we start collecting those values
+    for window in windows_getter(path):
+        sta = 0
+        for vl in window:
+            stvs[sta].add(vl)
+            # move to the next state
+            for _, ds, lg, rg in md[sta]["t"]:
+                if lg < vl <= rg:
+                    sta = ds
+                    break
+    # now we can reestimate
+    for sta in md:
+        md[sta]["p"] = sum(stvs[sta]) / float(len(stvs[sta]))
+    # ready to return
+    return md
 
 
 if __name__ == "__main__":
-    m = load_time_md("/home/nino/LEMMA/state_merging_regressor/experiments/sinus/0/model.rtitm")
-    export_md(m, "/home/nino/LEMMA/state_merging_regressor/experiments/sinus/0/rtitm.dot")
-    print m
+    # m = load_time_md("/home/nino/PycharmProjects/rai_experiments/sinus/data/0/rtitm.rti")
+    # print m
+    # export_md(m, "/home/nino/LEMMA/state_merging_regressor/experiments/sinus/0/rtitm.dot")
+    p = "/home/nino/PycharmProjects/rai_experiments/sinus/data/0/train.flat"
+    # for v in windows_getter(p):
+    #     print v
+    #m = restimate_md(m, p)
