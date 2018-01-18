@@ -167,14 +167,12 @@ def restimate_md(md, path):
     for window in windows_getter(path):
         sta = 0
         for vl in window:
-            cvl = 0.
-            # move to the next state
+            stvs[sta].append(vl)
+            # looking for the next state
             for _, ds, lg, rg in md[sta]["t"]:
                 if lg < vl <= rg:
                     sta = ds
-                    cvl = vl
                     break
-        stvs[sta].append(cvl)
     # now we can reestimate
     for sta in md:
         md[sta]["p"] = sum(stvs[sta]) / float(len(stvs[sta])) if stvs[sta] else 0.
@@ -195,4 +193,4 @@ if __name__ == "__main__":
     print m
     m = restimate_md(m, f)
     print m
-    du.export_md(m, "/home/nino/PycharmProjects/rai_experiments/sinus/data/0/canc.dot")
+    # du.export_md(m, "/home/nino/PycharmProjects/rai_experiments/sinus/data/0/canc.dot")

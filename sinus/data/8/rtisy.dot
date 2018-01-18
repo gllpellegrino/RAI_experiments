@@ -1,20 +1,20 @@
 digraph a {
-0 [shape=circle, label="0\n0.0"];
+0 [shape=circle, label="0\n-0.0100416243655"];
 	0 -> 2 [label="]-Infinity, 0.0]"];
 	0 -> 1 [label="]0.0, Infinity["];
-1 [shape=circle, label="1\n0.0"];
+1 [shape=circle, label="1\n-0.0015143442623"];
 	1 -> 5 [label="]-Infinity, 0.0]"];
 	1 -> 3 [label="]0.0, Infinity["];
-2 [shape=circle, label="2\n0.0"];
+2 [shape=circle, label="2\n-0.0147847082495"];
 	2 -> 6 [label="]-Infinity, 0.0]"];
 	2 -> 4 [label="]0.0, Infinity["];
-3 [shape=circle, label="3\n0.619228"];
+3 [shape=circle, label="3\n-0.625392276423"];
 	3 -> 5 [label="]-Infinity, Infinity["];
-4 [shape=circle, label="4\n0.589052845528"];
+4 [shape=circle, label="4\n0.623106604867"];
 	4 -> 3 [label="]-Infinity, Infinity["];
-5 [shape=circle, label="5\n-0.633101214575"];
+5 [shape=circle, label="5\n-0.630137089747"];
 	5 -> 6 [label="]-Infinity, 0.0]"];
 	5 -> 6 [label="]0.0, Infinity["];
-6 [shape=circle, label="6\n-0.632640495868"];
+6 [shape=circle, label="6\n0.594966676326"];
 	6 -> 4 [label="]-Infinity, Infinity["];
 }

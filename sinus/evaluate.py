@@ -12,20 +12,16 @@ Each alternative technique must return a prediction for each value within the te
 
 import warnings as wr
 from math import sqrt
-
 import dot_utility as du
 import meta as mt
 import rti_utility as ru
 import setup as st
-
+import matplotlib.pyplot as plt
 # workaround to ignore the pandas.core.datetools deprecation warning
 from statsmodels import ConvergenceWarning
 wr.simplefilter(action='ignore', category=FutureWarning)
 wr.simplefilter(action='ignore', category=ConvergenceWarning)
 from statsmodels.tsa.statespace.sarimax import SARIMAX
-
-
-# TECHNIQUES = {"Persistence", "RAI", "RTI-SY", "RTI-TM", "ARIMA", "ARMA"}
 
 
 # ------------------------------------------------------------------------------------------------------------------
@@ -72,7 +68,6 @@ def persistence(flat_path):
 # rai and rti only require the flat test file path and a model dot file path.
 # we can use the same method for both techniques because we
 def rairti(flat_path, dot_path):
-    # @ nota che la wsize qua è 16 e RAI lo usiamo con prefix a 8
     md = du.load_md(dot_path)
     first_w = True
     for window in ru.windows_getter(flat_path):
@@ -111,10 +106,10 @@ def sarimax(flat_path, tr_flat_path, i=True):
     tr = [vl for vl in st.load_flat(tr_flat_path)]
     ts = [vl for vl in st.load_flat(flat_path)]
     # training
-    md1 = SARIMAX(tr, order=(mt.WSIZE, d, 0), enforce_stationarity=False, enforce_invertibility=False)
+    md1 = SARIMAX(tr, order=(mt.PERIOD, d, 1), enforce_stationarity=False, enforce_invertibility=False)
     rs1 = md1.fit(disp=0)
     # testing
-    md2 = SARIMAX(ts, order=(mt.WSIZE, d, 0), enforce_stationarity=False, enforce_invertibility=False)
+    md2 = SARIMAX(ts, order=(mt.PERIOD, d, 1), enforce_stationarity=False, enforce_invertibility=False)
     rs2 = md2.filter(rs1.params)
     # assembling the results
     for i in xrange(len(ts)):
@@ -145,13 +140,56 @@ def evaluate_tc(flat_path_ts, flat_path_tr, rai_dot, rtisy_dot, rtitm_dot):
     rt = [vl for vl, _ in rairti(flat_path_ts, rtitm_dot)]
     res["RTI+ time"] = {"MAE": mae(rt, gl), "MAPE": mape(rt, gl), "RMSE": rmse(rt, gl)}
     # ARIMA
-    ar = [vl for vl, _ in sarimax(flat_path_ts, flat_path_tr)]
-    res["ARIMA"] = {"MAE": mae(ar, gl), "MAPE": mape(ar, gl), "RMSE": rmse(ar, gl)}
+    ai = [vl for vl, _ in sarimax(flat_path_ts, flat_path_tr)]
+    res["ARIMA"] = {"MAE": mae(ai, gl), "MAPE": mape(ai, gl), "RMSE": rmse(ai, gl)}
     # ARMA
-    ai = [vl for vl, _ in sarimax(flat_path_ts, flat_path_tr, False)]
-    res["ARMA"] = {"MAE": mae(ai, gl), "MAPE": mape(ai, gl), "RMSE": rmse(ai, gl)}
+    am = [vl for vl, _ in sarimax(flat_path_ts, flat_path_tr, False)]
+    res["ARMA"] = {"MAE": mae(am, gl), "MAPE": mape(am, gl), "RMSE": rmse(am, gl)}
     # -----------------------------------------------------------------------------------
     return res
+
+
+# utility to plot the predictions for a test case identifier [0 to 9 on sinus]
+def plot(test_case):
+    # setting the paths
+    tcdir = mt.BASEDIR + "/" + str(test_case)
+    ts_flat = tcdir + "/test.flat"
+    tr_flat = tcdir + "/train.flat"
+    rai_dot = tcdir + "/rai.dot"
+    rtisy_dot = tcdir + "/rtisy.dot"
+    rtitm_dot = tcdir + "/rtitm.dot"
+    # getting the predictions
+    # -----------------------------------------------------
+    # gold
+    gl = [vl for _, vl in persistence(ts_flat)]
+    # persistence
+    pr = [vl for vl, _ in persistence(ts_flat)]
+    # RAI
+    ra = [vl for vl, _ in rairti(ts_flat, rai_dot)]
+    # RTI+ symbols
+    rs = [vl for vl, _ in rairti(ts_flat, rtisy_dot)]
+    # RTI+ time
+    rt = [vl for vl, _ in rairti(ts_flat, rtitm_dot)]
+    # ARIMA
+    ai = [vl for vl, _ in sarimax(ts_flat, tr_flat)]
+    # ARMA
+    am = [vl for vl, _ in sarimax(ts_flat, tr_flat, False)]
+    # -----------------------------------------------------
+    # now we plot)
+    # index
+    ix = [i for i in xrange(len(gl))]
+    plt.title('Predicion Performance')
+    plt.plot(ix, gl, label="Gold", color="y")
+    plt.plot(ix, pr, label="Persistence", color="b")
+    plt.plot(ix, ra, label="RAI", color="g")
+    plt.plot(ix, rs, label="RTI+(sy)", color="r")
+    plt.plot(ix, rt, label="RTI+(tm)", color="c")
+    plt.plot(ix, ai, label="ARIMA", color="m")
+    plt.plot(ix, am, label="ARMA", color="k")
+    plt.grid(True)
+    plt.legend()
+    # plt.savefig("/home/nino/Scrivania/plot.png")
+    plt.show()
 
 
 # main evaluation method.
@@ -171,7 +209,8 @@ def evaluate():
         for tn in rs:
             print "\n", tn
             for pm in rs[tn]:
-                print pm, rs[tn][pm]
+                if pm == "MAE":
+                    print pm, rs[tn][pm]
         print "\n"
 
 
@@ -183,3 +222,4 @@ if __name__ == "__main__":
     # print "LEN", len(vs1)
     # print "VALS", vs1
     evaluate()
+    # plot(2)
