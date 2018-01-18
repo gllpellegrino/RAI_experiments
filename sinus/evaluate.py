@@ -12,11 +12,11 @@ Each alternative technique must return a prediction for each value within the te
 
 import warnings as wr
 from math import sqrt
-import dot_utility as du
-import meta as mt
-import rti_utility as ru
-import setup as st
 import matplotlib.pyplot as plt
+import dot_utility as du
+import rti_utility as ru
+import sinus_utility as su
+import sinus.meta as mt
 # workaround to ignore the pandas.core.datetools deprecation warning
 from statsmodels import ConvergenceWarning
 wr.simplefilter(action='ignore', category=FutureWarning)
@@ -57,7 +57,7 @@ def rmse(prd, obs):
 # persistence baseline, only requires the flat test file path.
 def persistence(flat_path):
     prd = 0.
-    for vl in st.load_flat(flat_path):
+    for vl in su.load_flat(flat_path):
         yield prd, vl
         prd = vl
 
@@ -103,8 +103,8 @@ def sarimax(flat_path, tr_flat_path, i=True):
     # setting the integration order
     d = 1 if i else 0
     # getting training and testing data
-    tr = [vl for vl in st.load_flat(tr_flat_path)]
-    ts = [vl for vl in st.load_flat(flat_path)]
+    tr = [vl for vl in su.load_flat(tr_flat_path)]
+    ts = [vl for vl in su.load_flat(flat_path)]
     # training
     md1 = SARIMAX(tr, order=(mt.PERIOD, d, 1), enforce_stationarity=False, enforce_invertibility=False)
     rs1 = md1.fit(disp=0)
@@ -194,6 +194,14 @@ def plot(test_case):
 
 # main evaluation method.
 def evaluate():
+    # setting general parameters for all the utility moduli called in this script
+    su.PRECISION = mt.PRECISION
+    ru.PRECISION = mt.PRECISION
+    ru.ABOUNDS = mt.ABOUNDS
+    ru.ASIZE = mt.ASIZE
+    ru.WSIZE = mt.WSIZE
+    ru.TRAINL = mt.TRAINL
+    # -----------------------------------------------------------------------------------
     for tc in mt.TCIDS:
         print "learning automata for test case", tc
         # sets the paths
@@ -222,4 +230,4 @@ if __name__ == "__main__":
     # print "LEN", len(vs1)
     # print "VALS", vs1
     evaluate()
-    # plot(2)
+    # plot(5)

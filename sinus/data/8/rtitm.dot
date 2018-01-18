@@ -1,6 +1,8 @@
 digraph a {
 0 [shape=circle, label="0\n-0.0100416243655"];
-	0 -> 1 [label="]-Infinity, -0.017]"];
+	0 -> 1 [label="]-Infinity, -0.326]"];
+	0 -> 1 [label="]-0.326, -0.174]"];
+	0 -> 1 [label="]-0.174, -0.017]"];
 	0 -> 6 [label="]-0.017, 0.07]"];
 	0 -> 6 [label="]0.07, 0.276]"];
 	0 -> 6 [label="]0.276, 0.559]"];
@@ -8,9 +10,8 @@ digraph a {
 	0 -> 6 [label="]0.829, Infinity["];
 1 [shape=circle, label="1\n-0.016906122449"];
 	1 -> 2 [label="]-Infinity, 0.0]"];
-	1 -> 3 [label="]0.0, 0.105]"];
-	1 -> 3 [label="]0.105, 0.574]"];
-	1 -> 3 [label="]0.574, Infinity["];
+	1 -> 3 [label="]0.0, 0.391]"];
+	1 -> 3 [label="]0.391, Infinity["];
 2 [shape=circle, label="2\n0.600517981439"];
 	2 -> 3 [label="]-Infinity, Infinity["];
 3 [shape=circle, label="3\n0.624099274311"];

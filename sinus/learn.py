@@ -7,7 +7,7 @@ Automata learning utility.
 It may call RTI+ rather than RAI.
 """
 
-import meta as mt
+import sinus.meta as mt
 import os
 import rti_utility as rtu
 import dot_utility as dtu
@@ -30,6 +30,13 @@ def learn():
     # 1) learn model for RAI
     # 2) learn model for RTI+ with alphabet
     # 3) learn model for RTI+ with time
+    # ----------------------------------------------------------
+    # setting general parameters for all the utility moduli called in this script
+    rtu.PRECISION = mt.PRECISION
+    rtu.ABOUNDS = mt.ABOUNDS
+    rtu.WSIZE = mt.WSIZE
+    rtu.TRAINL = mt.TRAINL
+    rtu.ASIZE = mt.ASIZE
     for tc in mt.TCIDS:
         print "learning automata for test case", tc
         # setting the base directory for test case tc

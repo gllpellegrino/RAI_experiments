@@ -25,6 +25,9 @@ Q4 = 4
 # sinus quadrants collection
 QUADRANTS = [Q1, Q2, Q3, Q4]
 
+# precision when creating floating point values
+PRECISION = 3
+
 
 # generate a random value within a sinus quadrant
 def getv(q):
@@ -52,6 +55,20 @@ def getw(n=1000, startq=None):
     for _ in xrange(n):
         yield getv(q)
         q = (q % len(QUADRANTS)) + 1
+
+
+# flat sequence loader from path
+def load_flat(path):
+    with open(path, "r") as fh:
+        for line in fh:
+            yield float(line.strip())
+
+
+def export_flat(n, path):
+    # export a sinus wave (randomly initialized) of n elements to path
+    with open(path, "w") as oh:
+        for v in getw(n):
+            oh.write(str(round(v, PRECISION)) + "\n")
 
 
 if __name__ == "__main__":

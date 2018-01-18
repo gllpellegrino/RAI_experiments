@@ -9,13 +9,37 @@ Utility to interface RTI+ with this experiment.
 """
 
 
-import meta as mt
-import setup as st
+# import meta as mt
+import sinus.sinus_utility as su
 import re
 
 
+# regular expressions
 RTI_STATE_RE = "^(-?\d+) prob: symbol=(( \d+)+)"
 RTI_TRANS_RE = "^(-?\d+) (\d+) \[(\d+), (\d+)\]->(-?\d+)\\n$"
+
+# length of the train flat sequence
+TRAINL = 1000
+
+# alphabet
+ABOUNDS = {"0": (-float("inf"), 0.), "1": (0., float("inf"))}
+
+# alphabet size
+ASIZE = 2
+
+# precision in floating point numbers
+PRECISION = 3
+
+# window size
+WSIZE = 16
+
+
+# translate values into alphabet symbols.
+# bounds is a dict containing, for each symbol, the left and right bound in form of tuple
+def get_symbol(value, bounds):
+    for sy, (lb, rb) in bounds.items():
+        if lb < value <= rb:
+            return sy
 
 
 # utility to export a flat file to RAI sliding window training file
@@ -23,11 +47,11 @@ RTI_TRANS_RE = "^(-?\d+) (\d+) \[(\d+), (\d+)\]->(-?\d+)\\n$"
 def export_alpha_sw(inpath, wsize, oupath):
     with open(oupath, "w") as th:
         # writing the header
-        th.write(str(mt.TRAINL - wsize + 1) + " 2")
+        th.write(str(TRAINL - wsize + 1) + " " + str(ASIZE))
         # now the content
         window = []
-        for vl in st.load_flat(inpath):
-            sy = "0" if vl < 0. else "1"
+        for vl in su.load_flat(inpath):
+            sy = get_symbol(vl, ABOUNDS)
             if len(window) < wsize:
                 window.append(sy)
             else:
@@ -46,11 +70,11 @@ def export_alpha_sw(inpath, wsize, oupath):
 def export_time_sw(inpath, wsize, oupath):
     with open(oupath, "w") as th:
         # writing the header
-        th.write(str(mt.TRAINL - wsize + 1) + " 1")
+        th.write(str(TRAINL - wsize + 1) + " 1")
         # now the content
         window = []
-        for vl in st.load_flat(inpath):
-            timev = int(vl * pow(10, mt.PRECISION) + 1000)
+        for vl in su.load_flat(inpath):
+            timev = int(vl * pow(10, PRECISION) + 1000)
             if len(window) < wsize:
                 window.append(str(timev))
             else:
@@ -88,7 +112,8 @@ def load_alpha_md(path):
                     rt[ds] = {"p": 0., "t": []}
                 # and we skip transitions to the sink state
                 if ds >= 0:
-                    tr = (sr, ds, -float("inf"), 0.) if sy == "0" else (sr, ds, 0., float("inf"))
+                    lb, rb = ABOUNDS[sy]
+                    tr = (sr, ds, lb, rb)
                     rt[sr]["t"].append(tr)
         # extend guards from -inf to inf
         for sta in rt:
@@ -121,8 +146,8 @@ def load_time_md(path):
             if md is not None:
                 sr = int(md.group(1))
                 ds = int(md.group(5))
-                lg = (float(md.group(3)) - 1000.) * pow(10, -mt.PRECISION)
-                rg = (float(md.group(4)) - 1000.) * pow(10, -mt.PRECISION)
+                lg = (float(md.group(3)) - 1000.) * pow(10, -PRECISION)
+                rg = (float(md.group(4)) - 1000.) * pow(10, -PRECISION)
                 if ds not in rt:
                     rt[ds] = {"p": 0., "t": []}
                 # we skip transitions to the sink state (id: -1)
@@ -145,9 +170,9 @@ def load_time_md(path):
 # sliding window iterator given a flat file
 def windows_getter(path, wsize=None):
     if wsize is None:
-        wsize = mt.WSIZE
+        wsize = WSIZE
     window = []
-    for vl in st.load_flat(path):
+    for vl in su.load_flat(path):
         if len(window) < wsize:
             window.append(vl)
         else:

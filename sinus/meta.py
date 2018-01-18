@@ -34,8 +34,11 @@ PERIOD = 4
 # alphabet size (used by learn.py)
 ASIZE = 2
 
+# symbol bounds
+ABOUNDS = {"0": (-float("inf"), 0.), "1": (0., float("inf"))}
+
 # RTI+ bash command (used in learn.py)
-RTI_CMD = "/home/nino/bin/RTI/build/rti 1 0.001 {TRAIN} > {MODEL}"
+RTI_CMD = "/home/nino/bin/RTI/build/rti 1 0.05 {TRAIN} > {MODEL}"
 
 # RAI bash command (used in learn.py)
 RAI_CMD = "/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin/java " \

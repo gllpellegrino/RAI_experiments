@@ -12,26 +12,12 @@ The file format for the series consists of a value for each row in a text file w
 (train.flat, test.flat).
 """
 
-import meta as mt
-import sinus as sn
+import sinus.meta as mt
 import rai_utility as rai
 import rti_utility as rti
+import sinus.sinus_utility as su
 from os import mkdir, walk, rmdir, remove
 from os.path import exists, join
-
-
-# flat sequence loader from path
-def load_flat(path):
-    with open(path, "r") as fh:
-        for line in fh:
-            yield float(line.strip())
-
-
-def export_flat(n, path):
-    # export a sinus wave (randomly initialized) of n elements to path
-    with open(path, "w") as oh:
-        for v in sn.getw(n):
-            oh.write(str(round(v, mt.PRECISION)) + "\n")
 
 
 def clean():
@@ -50,6 +36,14 @@ def setup():
     # 3) generate train file for RAI
     # 4) generate train file for RTI+ with alphabet criterion
     # 5) generate train file for RTI+ with time criterion
+    # ----------------------------------------------------------
+    # setting general parameters for all the utility moduli called in this script
+    su.PRECISION = mt.PRECISION
+    rti.PRECISION = mt.PRECISION
+    rti.ABOUNDS = mt.ABOUNDS
+    rti.WSIZE = mt.WSIZE
+    rti.TRAINL = mt.TRAINL
+    rti.ASIZE = mt.ASIZE
     for tc in mt.TCIDS:
         print "setting up test case", tc
         # setting the base directory for test case tc
@@ -63,9 +57,9 @@ def setup():
         rtissw = tcdir + "/rtisy.sw"
         rtitsw = tcdir + "/rtitm.sw"
         # generating the training flat wave file
-        export_flat(mt.TRAINL, flat)
+        su.export_flat(mt.TRAINL, flat)
         # generating the testing flat wave file
-        export_flat(mt.TESTL, tcdir + "/test.flat")
+        su.export_flat(mt.TESTL, tcdir + "/test.flat")
         # generating training slided file for RAI
         rai.export_sw(flat, mt.WSIZE, raisw)
         # generating training slided file for RTI with alphabet

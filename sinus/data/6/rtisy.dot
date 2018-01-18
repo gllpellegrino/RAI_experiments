@@ -1,21 +1,21 @@
 digraph a {
 0 [shape=circle, label="0\n-0.0115705583756"];
-	0 -> 2 [label="]-Infinity, 0.0]"];
-	0 -> 1 [label="]0.0, Infinity["];
-1 [shape=circle, label="1\n0.00362909836066"];
-	1 -> 4 [label="]-Infinity, 0.0]"];
-	1 -> 3 [label="]0.0, Infinity["];
-2 [shape=circle, label="2\n-0.0284647887324"];
+	0 -> 1 [label="]-Infinity, 0.0]"];
+	0 -> 2 [label="]0.0, Infinity["];
+1 [shape=circle, label="1\n-0.0284647887324"];
+	1 -> 3 [label="]-Infinity, 0.0]"];
+	1 -> 4 [label="]0.0, Infinity["];
+2 [shape=circle, label="2\n0.00362909836066"];
 	2 -> 5 [label="]-Infinity, 0.0]"];
 	2 -> 6 [label="]0.0, Infinity["];
-3 [shape=circle, label="3\n-0.633947720012"];
+3 [shape=circle, label="3\n0.587558806489"];
 	3 -> 4 [label="]-Infinity, 0.0]"];
 	3 -> 4 [label="]0.0, Infinity["];
-4 [shape=circle, label="4\n-0.644311356375"];
-	4 -> 5 [label="]-Infinity, 0.0]"];
-	4 -> 5 [label="]0.0, Infinity["];
-5 [shape=circle, label="5\n0.587558806489"];
-	5 -> 6 [label="]-Infinity, Infinity["];
-6 [shape=circle, label="6\n0.637834588644"];
-	6 -> 3 [label="]-Infinity, Infinity["];
+4 [shape=circle, label="4\n0.637834588644"];
+	4 -> 6 [label="]-Infinity, 0.0]"];
+	4 -> 6 [label="]0.0, Infinity["];
+5 [shape=circle, label="5\n-0.644311356375"];
+	5 -> 3 [label="]-Infinity, Infinity["];
+6 [shape=circle, label="6\n-0.633947720012"];
+	6 -> 5 [label="]-Infinity, Infinity["];
 }

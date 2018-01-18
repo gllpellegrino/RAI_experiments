@@ -4,19 +4,19 @@
 __author__ = 'Gaetano "Gibbster" Pellegrino'
 
 
-import setup as st
-
-
 """
 Uitility to interface RAI with this experiment.
 """
+
+
+import sinus.sinus_utility as su
 
 
 # utility to export a flat file to RAI sliding window training file
 def export_sw(inpath, wsize, oupath):
     with open(oupath, "w") as th:
         window = []
-        for vl in st.load_flat(inpath):
+        for vl in su.load_flat(inpath):
             if len(window) < wsize:
                 window.append(str(vl))
             else:
