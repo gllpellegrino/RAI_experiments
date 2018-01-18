@@ -11,7 +11,7 @@ import re
 
 
 STATE_RE = r'(-?\d+) \[shape=circle, label=\"(-?\d+)\\n(\S+)\"\];'
-TRANS_RE = r'\t(-?\d+)->(-?\d+) \[ label=\"\](\S+), (\S+)(\]|\[)\"\];'
+TRANS_RE = r'\t(-?\d+) -> (-?\d+) \[label=\"\](\S+), (\S+)(\]|\[)\"\];'
 
 
 # loader of automata stored in dot format
@@ -36,7 +36,6 @@ def load_md(path):
                 ds = int(md.group(2))
                 lg = -float("inf") if "Infinity" in md.group(3) else float(md.group(3))
                 rg = float("inf") if "Infinity" in md.group(4) else float(md.group(4))
-                print ">", line, lg, rg
                 if ds not in rt:
                     rt[ds] = {"p": 0., "t": []}
                 # we skip transitions to the sink state (id: -1)
@@ -58,11 +57,11 @@ def export_md(rt, path):
                 # we skip transition to the sink
                 fl = "]" + str(lg) if lg != -float("inf") else "]-Infinity"
                 fr = str(rg) + "]" if rg != float("inf") else "Infinity["
-                ln = "\n\t" + str(sta) + "->" + str(ds) + " [ label=\"" + fl + ", " + fr + "\"];"
+                ln = "\n\t" + str(sta) + " -> " + str(ds) + " [label=\"" + fl + ", " + fr + "\"];"
                 eh.write(ln)
         eh.write("\n}")
 
 
 if __name__ == "__main__":
-    m = load_md("/home/nino/PycharmProjects/rai_experiments/sinus/data/0/rtitm.dot")
+    m = load_md("/home/nino/PycharmProjects/rai_experiments/sinus/data/0/rai.dot")
     print m

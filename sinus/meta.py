@@ -14,7 +14,7 @@ BASEDIR = "/home/nino/PycharmProjects/rai_experiments/sinus/data"
 TRAINL = 1000
 
 # length of the testing flat waves
-TESTL = 100
+TESTL = 250
 
 # precision of sinus values (used in setup.py)
 PRECISION = 3

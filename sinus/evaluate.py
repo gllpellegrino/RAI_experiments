@@ -10,26 +10,72 @@ Each alternative technique must return a prediction for each value within the te
 """
 
 
-import setup as st
-import rti_utility as ru
+import warnings as wr
+from math import sqrt
+
 import dot_utility as du
+import meta as mt
+import rti_utility as ru
+import setup as st
+
+# workaround to ignore the pandas.core.datetools deprecation warning
+from statsmodels import ConvergenceWarning
+wr.simplefilter(action='ignore', category=FutureWarning)
+wr.simplefilter(action='ignore', category=ConvergenceWarning)
+from statsmodels.tsa.statespace.sarimax import SARIMAX
+
+
+# TECHNIQUES = {"Persistence", "RAI", "RTI-SY", "RTI-TM", "ARIMA", "ARMA"}
+
+
+# ------------------------------------------------------------------------------------------------------------------
+
+
+# mean absolute error.
+# expects a list of predictions, and a list of observations, of the same size
+def mae(prd, obs):
+    sm = 0.
+    for i in xrange(len(prd)):
+        sm += abs(prd[i] - obs[i])
+    return sm / float(len(prd))
+
+
+# mean absolute percentage error.
+# expects a list of predictions, and a list of observations, of the same size
+def mape(prd, obs):
+    sm = 0.
+    for i in xrange(len(prd)):
+        sm += abs((obs[i] - prd[i]) / obs[i]) if obs[i] != 0. else 0.
+    return 100. / float(len(prd)) * sm
+
+
+# root-mean-square error
+# expects a list of predictions, and a list of observations, of the same size
+def rmse(prd, obs):
+    sm = 0.
+    for i in xrange(len(prd)):
+        sm += (prd[i] - obs[i]) * (prd[i] - obs[i])
+    return sqrt(sm / float(len(prd)))
 
 
 # persistence baseline, only requires the flat test file path.
-def persistence(test_flat):
+def persistence(flat_path):
     prd = 0.
-    for vl in st.load_flat(test_flat):
+    for vl in st.load_flat(flat_path):
         yield prd, vl
         prd = vl
 
 
+# -----------------------------------------------------------------------------------------------------------------
+
+
 # rai and rti only require the flat test file path and a model dot file path.
-# we can use the same methon for both techniques because we
-def rairti(dot_path, test_flat):
-    #@todo nota che la wsize qua è 16 e RAI lo usiamo con prefix a 8
+# we can use the same method for both techniques because we
+def rairti(flat_path, dot_path):
+    # @ nota che la wsize qua è 16 e RAI lo usiamo con prefix a 8
     md = du.load_md(dot_path)
     first_w = True
-    for window in ru.windows_getter(test_flat):
+    for window in ru.windows_getter(flat_path):
         sta = 0
         if first_w:
             first_w = False
@@ -52,5 +98,88 @@ def rairti(dot_path, test_flat):
             yield prd, window[-1]
 
 
+# seasonal arma and arima predictions gatherer.
+# based on Chad Fulton's post in here:
+# https://github.com/statsmodels/statsmodels/issues/2577
+# ---------------------------------------------------------
+# it expects a path to the test flat file,
+# i is a boolean flag to use or not the integration (arima does, arma does not)
+def sarimax(flat_path, tr_flat_path, i=True):
+    # setting the integration order
+    d = 1 if i else 0
+    # getting training and testing data
+    tr = [vl for vl in st.load_flat(tr_flat_path)]
+    ts = [vl for vl in st.load_flat(flat_path)]
+    # training
+    md1 = SARIMAX(tr, order=(mt.WSIZE, d, 0), enforce_stationarity=False, enforce_invertibility=False)
+    rs1 = md1.fit(disp=0)
+    # testing
+    md2 = SARIMAX(ts, order=(mt.WSIZE, d, 0), enforce_stationarity=False, enforce_invertibility=False)
+    rs2 = md2.filter(rs1.params)
+    # assembling the results
+    for i in xrange(len(ts)):
+        yield list(rs2.predict(i, i))[-1], ts[i]
+
+
+# evaluate a single test case.
+# flat_path_ts is the flat data path for testing
+# flat_path_tr is the flat data path for training
+# rai_dot is the dot file path of an automaton with RAI
+# rtisy_dot is the dot file path of an automaton with RTI+ and symbols
+# rtitm_dot is the dot file path of an automaton with RTI+ and time
+def evaluate_tc(flat_path_ts, flat_path_tr, rai_dot, rtisy_dot, rtitm_dot):
+    res = {}
+    # -----------------------------------------------------------------------------------
+    # gold
+    gl = [vl for _, vl in persistence(flat_path_ts)]
+    # persistence
+    pr = [vl for vl, _ in persistence(flat_path_ts)]
+    res["Persistence"] = {"MAE": mae(pr, gl), "MAPE": mape(pr, gl), "RMSE": rmse(pr, gl)}
+    # RAI
+    ra = [vl for vl, _ in rairti(flat_path_ts, rai_dot)]
+    res["RAI"] = {"MAE": mae(ra, gl), "MAPE": mape(ra, gl), "RMSE": rmse(ra, gl)}
+    # RTI+ symbols
+    rs = [vl for vl, _ in rairti(flat_path_ts, rtisy_dot)]
+    res["RTI+ symbols"] = {"MAE": mae(rs, gl), "MAPE": mape(rs, gl), "RMSE": rmse(rs, gl)}
+    # RTI+ time
+    rt = [vl for vl, _ in rairti(flat_path_ts, rtitm_dot)]
+    res["RTI+ time"] = {"MAE": mae(rt, gl), "MAPE": mape(rt, gl), "RMSE": rmse(rt, gl)}
+    # ARIMA
+    ar = [vl for vl, _ in sarimax(flat_path_ts, flat_path_tr)]
+    res["ARIMA"] = {"MAE": mae(ar, gl), "MAPE": mape(ar, gl), "RMSE": rmse(ar, gl)}
+    # ARMA
+    ai = [vl for vl, _ in sarimax(flat_path_ts, flat_path_tr, False)]
+    res["ARMA"] = {"MAE": mae(ai, gl), "MAPE": mape(ai, gl), "RMSE": rmse(ai, gl)}
+    # -----------------------------------------------------------------------------------
+    return res
+
+
+# main evaluation method.
+def evaluate():
+    for tc in mt.TCIDS:
+        print "learning automata for test case", tc
+        # sets the paths
+        tcdir = mt.BASEDIR + "/" + str(tc)
+        ts_flat = tcdir + "/test.flat"
+        tr_flat = tcdir + "/train.flat"
+        rai_dot = tcdir + "/rai.dot"
+        rtisy_dot = tcdir + "/rtisy.dot"
+        rtitm_dot = tcdir + "/rtitm.dot"
+        # evaluation of test case tc
+        rs = evaluate_tc(ts_flat, tr_flat, rai_dot, rtisy_dot, rtitm_dot)
+        # showing the results
+        for tn in rs:
+            print "\n", tn
+            for pm in rs[tn]:
+                print pm, rs[tn][pm]
+        print "\n"
+
+
 if __name__ == "__main__":
-    pass
+    # f1 = "/home/nino/PycharmProjects/rai_experiments/sinus/data/0/test.flat"
+    # f2 = "/home/nino/PycharmProjects/rai_experiments/sinus/data/0/train.flat"
+    # m = "/home/nino/PycharmProjects/rai_experiments/sinus/data/0/rai.dot"
+    # vs1 = [v for v, _ in sarimax(f1, f2)]
+    # print "LEN", len(vs1)
+    # print "VALS", vs1
+    evaluate()
