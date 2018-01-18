@@ -165,7 +165,7 @@ def restimate_md(md, path):
     stvs = {sta: [] for sta in md}
     # now we start collecting those values
     for window in windows_getter(path):
-        sta, cvl = 0, 0.
+        sta = 0
         for vl in window:
             cvl = 0.
             # move to the next state
