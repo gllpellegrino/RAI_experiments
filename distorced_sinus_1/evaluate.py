@@ -15,7 +15,7 @@ from math import sqrt
 import matplotlib.pyplot as plt
 import dot_utility as du
 import rti_utility as ru
-import sinus_utility as su
+import distorced_sinus_1.sinus_utility as su
 import distorced_sinus_1.meta as mt
 # workaround to ignore the pandas.core.datetools deprecation warning
 from statsmodels import ConvergenceWarning
@@ -230,4 +230,4 @@ if __name__ == "__main__":
     # print "LEN", len(vs1)
     # print "VALS", vs1
     evaluate()
-    # plot(5)
+    # plot(9)

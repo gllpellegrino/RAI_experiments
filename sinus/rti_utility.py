@@ -74,7 +74,7 @@ def export_time_sw(inpath, wsize, oupath):
         # now the content
         window = []
         for vl in su.load_flat(inpath):
-            timev = int(vl * pow(10, PRECISION) + 1000)
+            timev = int(vl * pow(10, PRECISION) + 1000.)
             if len(window) < wsize:
                 window.append(str(timev))
             else:
@@ -107,11 +107,11 @@ def load_alpha_md(path):
                 sr = int(md.group(1))
                 sy = md.group(2)
                 ds = int(md.group(5))
-                # we skip the sink state
-                if ds not in rt and ds > 0:
-                    rt[ds] = {"p": 0., "t": []}
-                # and we skip transitions to the sink state
-                if ds >= 0:
+                # and we skip transitions to and from the sink state
+                if sr >= 0 and ds >= 0:
+                    # we skip the sink state
+                    if ds not in rt:
+                        rt[ds] = {"p": 0., "t": []}
                     lb, rb = ABOUNDS[sy]
                     tr = (sr, ds, lb, rb)
                     rt[sr]["t"].append(tr)
@@ -148,10 +148,10 @@ def load_time_md(path):
                 ds = int(md.group(5))
                 lg = (float(md.group(3)) - 1000.) * pow(10, -PRECISION)
                 rg = (float(md.group(4)) - 1000.) * pow(10, -PRECISION)
-                if ds not in rt:
-                    rt[ds] = {"p": 0., "t": []}
-                # we skip transitions to the sink state (id: -1)
-                if ds >= 0:
+                # we skip transitions to and from the sink state (id: -1)
+                if sr >= 0 and ds >= 0:
+                    if ds not in rt:
+                        rt[ds] = {"p": 0., "t": []}
                     tr = (sr, ds, lg, rg)
                     rt[sr]["t"].append(tr)
         # extend guards from -inf to inf
@@ -191,31 +191,32 @@ def restimate_md(md, path):
     # now we start collecting those values
     for window in windows_getter(path):
         sta = 0
-        for vl in window:
-            stvs[sta].append(vl)
+        for vl in window[:-1]:
             # looking for the next state
             for _, ds, lg, rg in md[sta]["t"]:
                 if lg < vl <= rg:
                     sta = ds
                     break
+        stvs[sta].append(window[-1])
     # now we can reestimate
     for sta in md:
+        # print sta, len(stvs[sta])
         md[sta]["p"] = sum(stvs[sta]) / float(len(stvs[sta])) if stvs[sta] else 0.
     # ready to return
     return md
 
 
 if __name__ == "__main__":
-    # m = load_time_md("/home/nino/PycharmProjects/rai_experiments/sinus/data/0/rtitm.rti")
-    # print m
+    m = load_alpha_md("/home/nino/PycharmProjects/rai_experiments/sinus/data/0/rtisy.rti")
+    print m
     # export_md(m, "/home/nino/LEMMA/state_merging_regressor/experiments/sinus/0/rtitm.dot")
-    p = "/home/nino/PycharmProjects/rai_experiments/sinus/data/0/rtisy.dot"
+    p = "/home/nino/PycharmProjects/rai_experiments/sinus/data/0/canc.dot"
     f = "/home/nino/PycharmProjects/rai_experiments/sinus/data/0/train.flat"
     # for v in windows_getter(p):
     #     print v
     import dot_utility as du
-    m = du.load_md(p)
-    print m
+    # m = du.load_md(p)
+    # print m
     m = restimate_md(m, f)
     print m
-    # du.export_md(m, "/home/nino/PycharmProjects/rai_experiments/sinus/data/0/canc.dot")
+    du.export_md(m, p)

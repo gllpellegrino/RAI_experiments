@@ -15,7 +15,7 @@ The file format for the series consists of a value for each row in a text file w
 import distorced_sinus_1.meta as mt
 import rai_utility as rai
 import rti_utility as rti
-import sinus_utility as su
+import distorced_sinus_1.sinus_utility as su
 from os import mkdir, walk, rmdir, remove
 from os.path import exists, join
 

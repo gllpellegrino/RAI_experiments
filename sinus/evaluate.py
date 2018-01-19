@@ -122,7 +122,15 @@ def sarimax(flat_path, tr_flat_path, i=True):
 # rai_dot is the dot file path of an automaton with RAI
 # rtisy_dot is the dot file path of an automaton with RTI+ and symbols
 # rtitm_dot is the dot file path of an automaton with RTI+ and time
-def evaluate_tc(flat_path_ts, flat_path_tr, rai_dot, rtisy_dot, rtitm_dot):
+def evaluate_tc(test_case):
+    # setting the paths
+    tcdir = mt.BASEDIR + "/" + str(test_case)
+    flat_path_ts = tcdir + "/test.flat"
+    flat_path_tr = tcdir + "/train.flat"
+    rai_dot = tcdir + "/rai.dot"
+    rtisy_dot = tcdir + "/rtisy.dot"
+    rtitm_dot = tcdir + "/rtitm.dot"
+    # getting the predictions
     res = {}
     # -----------------------------------------------------------------------------------
     # gold
@@ -204,15 +212,8 @@ def evaluate():
     # -----------------------------------------------------------------------------------
     for tc in mt.TCIDS:
         print "learning automata for test case", tc
-        # sets the paths
-        tcdir = mt.BASEDIR + "/" + str(tc)
-        ts_flat = tcdir + "/test.flat"
-        tr_flat = tcdir + "/train.flat"
-        rai_dot = tcdir + "/rai.dot"
-        rtisy_dot = tcdir + "/rtisy.dot"
-        rtitm_dot = tcdir + "/rtitm.dot"
         # evaluation of test case tc
-        rs = evaluate_tc(ts_flat, tr_flat, rai_dot, rtisy_dot, rtitm_dot)
+        rs = evaluate_tc(tc)
         # showing the results
         for tn in rs:
             print "\n", tn

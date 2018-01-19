@@ -38,8 +38,8 @@ def getv(q):
         return sin(radians(d))
     if q == Q2:
         # here is the difference !!
-        d = randint(90, 180)
-        return max(sin(radians(d)), .5)
+        d = randint(90, 120)
+        return sin(radians(d))
     if q == Q3:
         d = randint(180, 270)
         return sin(radians(d))

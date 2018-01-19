@@ -4,7 +4,7 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/sinus" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/distorced_sinus_1" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/distorced_sinus_1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/distorced_sinus_2" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
