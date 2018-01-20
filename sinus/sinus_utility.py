@@ -14,7 +14,7 @@ from random import randint, seed, choice
 
 
 # setting the random seed
-seed(1984)
+SEED = 1984
 
 # sinus quadrant identifiers
 Q1 = 1
@@ -49,6 +49,8 @@ def getv(q):
 
 # generate a sinus wave of length n
 def getw(n=1000, startq=None):
+    # setting the seed
+    seed(SEED)
     # setting the starting quadrant
     q = startq if startq in QUADRANTS else choice(QUADRANTS)
     # generating the whave

@@ -70,7 +70,7 @@ def persistence(flat_path):
 def rairti(flat_path, dot_path):
     md = du.load_md(dot_path)
     first_w = True
-    for window in ru.windows_getter(flat_path):
+    for window in ru.windows_getter(flat_path, mt.PERIOD):
         sta = 0
         if first_w:
             first_w = False

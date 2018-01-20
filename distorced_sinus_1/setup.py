@@ -46,6 +46,8 @@ def setup():
     rti.TRAINL = mt.TRAINL
     for tc in mt.TCIDS:
         print "setting up test case", tc
+        # setting the seed for the sequence generation
+        su.SEED = su.SEED + tc
         # setting the base directory for test case tc
         tcdir = mt.BASEDIR + "/" + str(tc)
         # creating the test case directory

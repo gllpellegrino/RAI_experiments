@@ -46,6 +46,8 @@ def setup():
     rti.ASIZE = mt.ASIZE
     for tc in mt.TCIDS:
         print "setting up test case", tc
+        # setting a specific seed for this test case (for the flat sequences generation)
+        su.SEED += tc
         # setting the base directory for test case tc
         tcdir = mt.BASEDIR + "/" + str(tc)
         # creating the test case directory

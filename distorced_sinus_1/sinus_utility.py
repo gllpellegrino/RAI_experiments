@@ -14,7 +14,7 @@ from random import randint, seed, choice
 
 
 # setting the random seed
-seed(1984)
+SEED = 1984
 
 # sinus quadrant identifiers
 Q1 = 1
@@ -38,10 +38,10 @@ def getv(q):
         return sin(radians(d))
     if q == Q2:
         # here is the difference !!
-        d = randint(90, 120)
+        d = randint(90, 135)
         return sin(radians(d))
     if q == Q3:
-        d = randint(180, 270)
+        d = randint(135, 270)
         return sin(radians(d))
     # q == Q4
     d = randint(270, 360)
@@ -50,6 +50,8 @@ def getv(q):
 
 # generate a sinus wave of length n
 def getw(n=1000, startq=None):
+    # setting the seed
+    seed(SEED)
     # setting the starting quadrant
     q = startq if startq in QUADRANTS else choice(QUADRANTS)
     # generating the whave

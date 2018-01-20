@@ -8,14 +8,14 @@ digraph a {
 2 [shape=circle, label="2\n0.0"];
 	2 -> 5 [label="]-Infinity, 0.0]"];
 	2 -> 6 [label="]0.0, Infinity["];
-3 [shape=circle, label="3\n0.627219512195"];
+3 [shape=circle, label="3\n0.629943089431"];
 	3 -> 4 [label="]-Infinity, 0.0]"];
 	3 -> 4 [label="]0.0, Infinity["];
-4 [shape=circle, label="4\n0.621648221344"];
+4 [shape=circle, label="4\n0.613932"];
 	4 -> 6 [label="]-Infinity, 0.0]"];
 	4 -> 6 [label="]0.0, Infinity["];
-5 [shape=circle, label="5\n-0.641845188285"];
+5 [shape=circle, label="5\n-0.631834710744"];
 	5 -> 3 [label="]-Infinity, Infinity["];
-6 [shape=circle, label="6\n-0.619012145749"];
+6 [shape=circle, label="6\n-0.649311740891"];
 	6 -> 5 [label="]-Infinity, Infinity["];
 }
