@@ -2,308 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66c9db45-2388-4e50-853e-88ea47bf58de" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/stratosphere/README.md" />
-      <change beforePath="$PROJECT_DIR$/.idea/rai_experiments.iml" afterPath="$PROJECT_DIR$/.idea/rai_experiments.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/stratosphere/data/stratosphere_utility.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/0/rai.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/0/rai.sw" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/0/rai.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/0/rtisy.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/0/rtisy.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/0/rtisy.sw" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/0/rtisy.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/0/rtitm.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/0/rtitm.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/0/rtitm.sw" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/0/rtitm.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/0/test.flat" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/0/test.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/0/train.flat" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/0/train.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/1/rai.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/1/rai.sw" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/1/rai.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/1/rtisy.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/1/rtisy.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/1/rtisy.sw" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/1/rtisy.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/1/rtitm.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/1/rtitm.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/1/rtitm.sw" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/1/rtitm.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/1/test.flat" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/1/test.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/1/train.flat" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/1/train.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/2/rai.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/2/rai.sw" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/2/rai.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/2/rtisy.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/2/rtisy.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/2/rtisy.sw" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/2/rtisy.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/2/rtitm.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/2/rtitm.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/2/rtitm.sw" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/2/rtitm.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/2/test.flat" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/2/test.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/2/train.flat" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/2/train.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/3/rai.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/3/rai.sw" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/3/rai.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/3/rtisy.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/3/rtisy.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/3/rtisy.sw" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/3/rtisy.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/3/rtitm.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/3/rtitm.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/3/rtitm.sw" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/3/rtitm.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/3/test.flat" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/3/test.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/3/train.flat" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/3/train.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/4/rai.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/4/rai.sw" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/4/rai.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/4/rtisy.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/4/rtisy.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/4/rtisy.sw" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/4/rtisy.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/4/rtitm.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/4/rtitm.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/4/rtitm.sw" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/4/rtitm.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/4/test.flat" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/4/test.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/4/train.flat" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/4/train.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/5/rai.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/5/rai.sw" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/5/rai.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/5/rtisy.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/5/rtisy.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/5/rtisy.sw" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/5/rtisy.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/5/rtitm.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/5/rtitm.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/5/rtitm.sw" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/5/rtitm.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/5/test.flat" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/5/test.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/5/train.flat" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/5/train.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/6/rai.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/6/rai.sw" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/6/rai.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/6/rtisy.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/6/rtisy.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/6/rtisy.sw" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/6/rtisy.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/6/rtitm.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/6/rtitm.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/6/rtitm.sw" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/6/rtitm.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/6/test.flat" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/6/test.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/6/train.flat" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/6/train.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/7/rai.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/7/rai.sw" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/7/rai.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/7/rtisy.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/7/rtisy.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/7/rtisy.sw" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/7/rtisy.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/7/rtitm.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/7/rtitm.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/7/rtitm.sw" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/7/rtitm.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/7/test.flat" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/7/test.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/7/train.flat" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/7/train.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/8/rai.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/8/rai.sw" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/8/rai.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/8/rtisy.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/8/rtisy.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/8/rtisy.sw" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/8/rtisy.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/8/rtitm.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/8/rtitm.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/8/rtitm.sw" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/8/rtitm.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/8/test.flat" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/8/test.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/8/train.flat" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/8/train.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/9/rai.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/9/rai.sw" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/9/rai.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/9/rtisy.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/9/rtisy.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/9/rtisy.sw" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/9/rtisy.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/9/rtitm.dot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/9/rtitm.rti" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/9/rtitm.sw" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/9/rtitm.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/9/test.flat" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/9/test.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/data/9/train.flat" afterPath="$PROJECT_DIR$/distorced_sinus_1/data/9/train.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/evaluate.py" afterPath="$PROJECT_DIR$/distorced_sinus_1/evaluate.py" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/gmon.out" afterPath="$PROJECT_DIR$/distorced_sinus_1/gmon.out" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/setup.py" afterPath="$PROJECT_DIR$/distorced_sinus_1/setup.py" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_1/sinus_utility.py" afterPath="$PROJECT_DIR$/distorced_sinus_1/sinus_utility.py" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/0/rai.dot" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/0/rai.dot" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/0/rai.sw" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/0/rai.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/0/rtisy.dot" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/0/rtisy.dot" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/0/rtisy.rti" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/0/rtisy.rti" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/0/rtisy.sw" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/0/rtisy.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/0/rtitm.dot" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/0/rtitm.dot" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/0/rtitm.rti" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/0/rtitm.rti" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/0/rtitm.sw" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/0/rtitm.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/0/test.flat" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/0/test.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/0/train.flat" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/0/train.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/1/rai.dot" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/1/rai.dot" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/1/rai.sw" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/1/rai.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/1/rtisy.dot" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/1/rtisy.dot" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/1/rtisy.rti" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/1/rtisy.rti" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/1/rtisy.sw" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/1/rtisy.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/1/rtitm.dot" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/1/rtitm.dot" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/1/rtitm.rti" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/1/rtitm.rti" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/1/rtitm.sw" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/1/rtitm.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/1/test.flat" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/1/test.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/1/train.flat" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/1/train.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/2/rai.dot" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/2/rai.dot" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/2/rai.sw" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/2/rai.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/2/rtisy.dot" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/2/rtisy.dot" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/2/rtisy.rti" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/2/rtisy.rti" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/2/rtisy.sw" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/2/rtisy.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/2/rtitm.dot" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/2/rtitm.dot" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/2/rtitm.rti" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/2/rtitm.rti" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/2/rtitm.sw" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/2/rtitm.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/2/test.flat" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/2/test.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/2/train.flat" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/2/train.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/3/rai.dot" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/3/rai.dot" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/3/rai.sw" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/3/rai.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/3/rtisy.dot" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/3/rtisy.dot" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/3/rtisy.rti" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/3/rtisy.rti" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/3/rtisy.sw" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/3/rtisy.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/3/rtitm.dot" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/3/rtitm.dot" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/3/rtitm.rti" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/3/rtitm.rti" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/3/rtitm.sw" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/3/rtitm.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/3/test.flat" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/3/test.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/3/train.flat" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/3/train.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/4/rai.dot" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/4/rai.dot" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/4/rai.sw" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/4/rai.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/4/rtisy.dot" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/4/rtisy.dot" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/4/rtisy.rti" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/4/rtisy.rti" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/4/rtisy.sw" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/4/rtisy.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/4/rtitm.dot" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/4/rtitm.dot" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/4/rtitm.rti" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/4/rtitm.rti" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/4/rtitm.sw" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/4/rtitm.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/4/test.flat" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/4/test.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/4/train.flat" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/4/train.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/5/rai.dot" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/5/rai.dot" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/5/rai.sw" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/5/rai.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/5/rtisy.dot" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/5/rtisy.dot" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/5/rtisy.rti" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/5/rtisy.rti" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/5/rtisy.sw" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/5/rtisy.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/5/rtitm.dot" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/5/rtitm.dot" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/5/rtitm.rti" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/5/rtitm.rti" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/5/rtitm.sw" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/5/rtitm.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/5/test.flat" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/5/test.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/5/train.flat" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/5/train.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/6/rai.dot" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/6/rai.dot" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/6/rai.sw" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/6/rai.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/6/rtisy.dot" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/6/rtisy.dot" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/6/rtisy.rti" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/6/rtisy.rti" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/6/rtisy.sw" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/6/rtisy.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/6/rtitm.dot" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/6/rtitm.dot" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/6/rtitm.rti" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/6/rtitm.rti" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/6/rtitm.sw" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/6/rtitm.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/6/test.flat" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/6/test.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/6/train.flat" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/6/train.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/7/rai.dot" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/7/rai.dot" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/7/rai.sw" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/7/rai.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/7/rtisy.dot" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/7/rtisy.dot" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/7/rtisy.rti" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/7/rtisy.rti" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/7/rtisy.sw" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/7/rtisy.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/7/rtitm.dot" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/7/rtitm.dot" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/7/rtitm.rti" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/7/rtitm.rti" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/7/rtitm.sw" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/7/rtitm.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/7/test.flat" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/7/test.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/7/train.flat" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/7/train.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/8/rai.dot" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/8/rai.dot" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/8/rai.sw" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/8/rai.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/8/rtisy.dot" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/8/rtisy.dot" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/8/rtisy.rti" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/8/rtisy.rti" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/8/rtisy.sw" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/8/rtisy.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/8/rtitm.dot" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/8/rtitm.dot" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/8/rtitm.rti" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/8/rtitm.rti" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/8/rtitm.sw" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/8/rtitm.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/8/test.flat" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/8/test.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/8/train.flat" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/8/train.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/9/rai.dot" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/9/rai.dot" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/9/rai.sw" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/9/rai.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/9/rtisy.dot" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/9/rtisy.dot" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/9/rtisy.rti" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/9/rtisy.rti" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/9/rtisy.sw" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/9/rtisy.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/9/rtitm.dot" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/9/rtitm.dot" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/9/rtitm.rti" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/9/rtitm.rti" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/9/rtitm.sw" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/9/rtitm.sw" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/9/test.flat" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/9/test.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/data/9/train.flat" afterPath="$PROJECT_DIR$/distorced_sinus_2/data/9/train.flat" />
-      <change beforePath="$PROJECT_DIR$/distorced_sinus_2/setup.py" afterPath="$PROJECT_DIR$/distorced_sinus_2/setup.py" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/0/test.flat" afterPath="$PROJECT_DIR$/sinus/data/0/test.flat" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/1/rai.dot" afterPath="$PROJECT_DIR$/sinus/data/1/rai.dot" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/1/rai.sw" afterPath="$PROJECT_DIR$/sinus/data/1/rai.sw" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/1/rtisy.dot" afterPath="$PROJECT_DIR$/sinus/data/1/rtisy.dot" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/1/rtisy.rti" afterPath="$PROJECT_DIR$/sinus/data/1/rtisy.rti" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/1/rtisy.sw" afterPath="$PROJECT_DIR$/sinus/data/1/rtisy.sw" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/1/rtitm.dot" afterPath="$PROJECT_DIR$/sinus/data/1/rtitm.dot" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/1/rtitm.rti" afterPath="$PROJECT_DIR$/sinus/data/1/rtitm.rti" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/1/rtitm.sw" afterPath="$PROJECT_DIR$/sinus/data/1/rtitm.sw" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/1/test.flat" afterPath="$PROJECT_DIR$/sinus/data/1/test.flat" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/1/train.flat" afterPath="$PROJECT_DIR$/sinus/data/1/train.flat" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/2/rai.dot" afterPath="$PROJECT_DIR$/sinus/data/2/rai.dot" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/2/rai.sw" afterPath="$PROJECT_DIR$/sinus/data/2/rai.sw" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/2/rtisy.dot" afterPath="$PROJECT_DIR$/sinus/data/2/rtisy.dot" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/2/rtisy.rti" afterPath="$PROJECT_DIR$/sinus/data/2/rtisy.rti" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/2/rtisy.sw" afterPath="$PROJECT_DIR$/sinus/data/2/rtisy.sw" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/2/rtitm.dot" afterPath="$PROJECT_DIR$/sinus/data/2/rtitm.dot" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/2/rtitm.rti" afterPath="$PROJECT_DIR$/sinus/data/2/rtitm.rti" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/2/rtitm.sw" afterPath="$PROJECT_DIR$/sinus/data/2/rtitm.sw" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/2/test.flat" afterPath="$PROJECT_DIR$/sinus/data/2/test.flat" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/2/train.flat" afterPath="$PROJECT_DIR$/sinus/data/2/train.flat" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/3/rai.dot" afterPath="$PROJECT_DIR$/sinus/data/3/rai.dot" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/3/rai.sw" afterPath="$PROJECT_DIR$/sinus/data/3/rai.sw" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/3/rtisy.dot" afterPath="$PROJECT_DIR$/sinus/data/3/rtisy.dot" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/3/rtisy.rti" afterPath="$PROJECT_DIR$/sinus/data/3/rtisy.rti" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/3/rtisy.sw" afterPath="$PROJECT_DIR$/sinus/data/3/rtisy.sw" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/3/rtitm.dot" afterPath="$PROJECT_DIR$/sinus/data/3/rtitm.dot" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/3/rtitm.rti" afterPath="$PROJECT_DIR$/sinus/data/3/rtitm.rti" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/3/rtitm.sw" afterPath="$PROJECT_DIR$/sinus/data/3/rtitm.sw" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/3/test.flat" afterPath="$PROJECT_DIR$/sinus/data/3/test.flat" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/3/train.flat" afterPath="$PROJECT_DIR$/sinus/data/3/train.flat" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/4/rai.dot" afterPath="$PROJECT_DIR$/sinus/data/4/rai.dot" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/4/rai.sw" afterPath="$PROJECT_DIR$/sinus/data/4/rai.sw" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/4/rtisy.dot" afterPath="$PROJECT_DIR$/sinus/data/4/rtisy.dot" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/4/rtisy.rti" afterPath="$PROJECT_DIR$/sinus/data/4/rtisy.rti" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/4/rtisy.sw" afterPath="$PROJECT_DIR$/sinus/data/4/rtisy.sw" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/4/rtitm.dot" afterPath="$PROJECT_DIR$/sinus/data/4/rtitm.dot" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/4/rtitm.rti" afterPath="$PROJECT_DIR$/sinus/data/4/rtitm.rti" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/4/rtitm.sw" afterPath="$PROJECT_DIR$/sinus/data/4/rtitm.sw" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/4/test.flat" afterPath="$PROJECT_DIR$/sinus/data/4/test.flat" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/4/train.flat" afterPath="$PROJECT_DIR$/sinus/data/4/train.flat" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/5/rai.dot" afterPath="$PROJECT_DIR$/sinus/data/5/rai.dot" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/5/rai.sw" afterPath="$PROJECT_DIR$/sinus/data/5/rai.sw" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/5/rtisy.dot" afterPath="$PROJECT_DIR$/sinus/data/5/rtisy.dot" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/5/rtisy.rti" afterPath="$PROJECT_DIR$/sinus/data/5/rtisy.rti" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/5/rtisy.sw" afterPath="$PROJECT_DIR$/sinus/data/5/rtisy.sw" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/5/rtitm.dot" afterPath="$PROJECT_DIR$/sinus/data/5/rtitm.dot" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/5/rtitm.rti" afterPath="$PROJECT_DIR$/sinus/data/5/rtitm.rti" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/5/rtitm.sw" afterPath="$PROJECT_DIR$/sinus/data/5/rtitm.sw" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/5/test.flat" afterPath="$PROJECT_DIR$/sinus/data/5/test.flat" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/5/train.flat" afterPath="$PROJECT_DIR$/sinus/data/5/train.flat" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/6/rai.dot" afterPath="$PROJECT_DIR$/sinus/data/6/rai.dot" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/6/rai.sw" afterPath="$PROJECT_DIR$/sinus/data/6/rai.sw" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/6/rtisy.dot" afterPath="$PROJECT_DIR$/sinus/data/6/rtisy.dot" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/6/rtisy.rti" afterPath="$PROJECT_DIR$/sinus/data/6/rtisy.rti" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/6/rtisy.sw" afterPath="$PROJECT_DIR$/sinus/data/6/rtisy.sw" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/6/rtitm.dot" afterPath="$PROJECT_DIR$/sinus/data/6/rtitm.dot" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/6/rtitm.rti" afterPath="$PROJECT_DIR$/sinus/data/6/rtitm.rti" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/6/rtitm.sw" afterPath="$PROJECT_DIR$/sinus/data/6/rtitm.sw" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/6/test.flat" afterPath="$PROJECT_DIR$/sinus/data/6/test.flat" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/6/train.flat" afterPath="$PROJECT_DIR$/sinus/data/6/train.flat" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/7/rai.dot" afterPath="$PROJECT_DIR$/sinus/data/7/rai.dot" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/7/rai.sw" afterPath="$PROJECT_DIR$/sinus/data/7/rai.sw" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/7/rtisy.dot" afterPath="$PROJECT_DIR$/sinus/data/7/rtisy.dot" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/7/rtisy.rti" afterPath="$PROJECT_DIR$/sinus/data/7/rtisy.rti" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/7/rtisy.sw" afterPath="$PROJECT_DIR$/sinus/data/7/rtisy.sw" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/7/rtitm.dot" afterPath="$PROJECT_DIR$/sinus/data/7/rtitm.dot" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/7/rtitm.rti" afterPath="$PROJECT_DIR$/sinus/data/7/rtitm.rti" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/7/rtitm.sw" afterPath="$PROJECT_DIR$/sinus/data/7/rtitm.sw" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/7/test.flat" afterPath="$PROJECT_DIR$/sinus/data/7/test.flat" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/7/train.flat" afterPath="$PROJECT_DIR$/sinus/data/7/train.flat" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/8/rai.dot" afterPath="$PROJECT_DIR$/sinus/data/8/rai.dot" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/8/rai.sw" afterPath="$PROJECT_DIR$/sinus/data/8/rai.sw" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/8/rtisy.dot" afterPath="$PROJECT_DIR$/sinus/data/8/rtisy.dot" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/8/rtisy.rti" afterPath="$PROJECT_DIR$/sinus/data/8/rtisy.rti" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/8/rtisy.sw" afterPath="$PROJECT_DIR$/sinus/data/8/rtisy.sw" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/8/rtitm.dot" afterPath="$PROJECT_DIR$/sinus/data/8/rtitm.dot" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/8/rtitm.rti" afterPath="$PROJECT_DIR$/sinus/data/8/rtitm.rti" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/8/rtitm.sw" afterPath="$PROJECT_DIR$/sinus/data/8/rtitm.sw" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/8/test.flat" afterPath="$PROJECT_DIR$/sinus/data/8/test.flat" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/8/train.flat" afterPath="$PROJECT_DIR$/sinus/data/8/train.flat" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/9/rai.dot" afterPath="$PROJECT_DIR$/sinus/data/9/rai.dot" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/9/rai.sw" afterPath="$PROJECT_DIR$/sinus/data/9/rai.sw" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/9/rtisy.dot" afterPath="$PROJECT_DIR$/sinus/data/9/rtisy.dot" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/9/rtisy.rti" afterPath="$PROJECT_DIR$/sinus/data/9/rtisy.rti" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/9/rtisy.sw" afterPath="$PROJECT_DIR$/sinus/data/9/rtisy.sw" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/9/rtitm.dot" afterPath="$PROJECT_DIR$/sinus/data/9/rtitm.dot" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/9/rtitm.rti" afterPath="$PROJECT_DIR$/sinus/data/9/rtitm.rti" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/9/rtitm.sw" afterPath="$PROJECT_DIR$/sinus/data/9/rtitm.sw" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/9/test.flat" afterPath="$PROJECT_DIR$/sinus/data/9/test.flat" />
-      <change beforePath="$PROJECT_DIR$/sinus/data/9/train.flat" afterPath="$PROJECT_DIR$/sinus/data/9/train.flat" />
-      <change beforePath="$PROJECT_DIR$/sinus/evaluate.py" afterPath="$PROJECT_DIR$/sinus/evaluate.py" />
       <change beforePath="$PROJECT_DIR$/sinus/setup.py" afterPath="$PROJECT_DIR$/sinus/setup.py" />
-      <change beforePath="$PROJECT_DIR$/sinus/sinus_utility.py" afterPath="$PROJECT_DIR$/sinus/sinus_utility.py" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/data/2013-11-06_capture-win6.binetflow.labeled.sorted.txt" afterPath="$PROJECT_DIR$/stratosphere/data/zeus_capture.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -314,32 +16,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="setup.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/distorced_sinus_2/setup.py">
+      <file leaf-file-name="stratosphere_utility.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/stratosphere/data/stratosphere_utility.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="38" column="31" lean-forward="false" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
+            <state relative-caret-position="324">
+              <caret line="56" column="26" lean-forward="true" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="learn.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/distorced_sinus_2/learn.py">
+      <file leaf-file-name="evaluate.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sinus/evaluate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="39" column="23" lean-forward="false" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+            <state relative-caret-position="252">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="evaluate.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/distorced_sinus_2/evaluate.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="198" column="31" lean-forward="false" selection-start-line="198" selection-start-column="31" selection-end-line="198" selection-end-column="31" />
-              <folding />
+      <file leaf-file-name="zeus_capture.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stratosphere/data/zeus_capture.txt">
+          <provider selected="true" editor-type-id="LargeFileEditor">
+            <state relative-caret-position="0">
+              <caret line="0" column="84" lean-forward="false" selection-start-line="0" selection-start-column="78" selection-end-line="0" selection-end-column="84" />
             </state>
           </provider>
         </entry>
@@ -362,6 +63,7 @@
       <find>States: 7</find>
       <find>States</find>
       <find>States: 9</find>
+      <find>95.211.9.145</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -397,6 +99,7 @@
         <option value="$PROJECT_DIR$/distorced_sinus_1/evaluate.py" />
         <option value="$PROJECT_DIR$/sinus/evaluate.py" />
         <option value="$PROJECT_DIR$/distorced_sinus_2/setup.py" />
+        <option value="$PROJECT_DIR$/stratosphere/data/stratosphere_utility.py" />
       </list>
     </option>
   </component>
@@ -424,7 +127,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -435,13 +138,19 @@
             <path>
               <item name="rai_experiments" type="b2602c69:ProjectViewProjectNode" />
               <item name="rai_experiments" type="462c0819:PsiDirectoryNode" />
-              <item name="sinus" type="462c0819:PsiDirectoryNode" />
+              <item name="stratosphere" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rai_experiments" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rai_experiments" type="462c0819:PsiDirectoryNode" />
+              <item name="stratosphere" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -471,7 +180,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.evaluate (1)">
+  <component name="RunManager" selected="Python.stratosphere_utility">
     <configuration name="evaluate (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -485,24 +194,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="rai_experiments" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/distorced_sinus_2/evaluate.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="evaluate" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sinus" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="rai_experiments" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sinus/evaluate.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -562,20 +253,38 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="stratosphere_utility" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/stratosphere/data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="rai_experiments" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/stratosphere/data/stratosphere_utility.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.evaluate" />
-      <item index="1" class="java.lang.String" itemvalue="Python.setup (1)" />
-      <item index="2" class="java.lang.String" itemvalue="Python.learn (1)" />
-      <item index="3" class="java.lang.String" itemvalue="Python.evaluate (1)" />
-      <item index="4" class="java.lang.String" itemvalue="Python.setup" />
+      <item index="0" class="java.lang.String" itemvalue="Python.setup (1)" />
+      <item index="1" class="java.lang.String" itemvalue="Python.learn (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Python.evaluate (1)" />
+      <item index="3" class="java.lang.String" itemvalue="Python.setup" />
+      <item index="4" class="java.lang.String" itemvalue="Python.stratosphere_utility" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.evaluate (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.learn (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.setup (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Python.setup" />
-        <item index="4" class="java.lang.String" itemvalue="Python.evaluate" />
+        <item index="0" class="java.lang.String" itemvalue="Python.stratosphere_utility" />
+        <item index="1" class="java.lang.String" itemvalue="Python.evaluate (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Python.learn (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.setup (1)" />
+        <item index="4" class="java.lang.String" itemvalue="Python.setup" />
       </list>
     </recent_temporary>
   </component>
@@ -597,17 +306,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1533" height="875" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24983692" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24983692" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985657" sideWeight="0.5022831" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="1.0" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2946545" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -646,13 +356,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sinus/dot_utility.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="37" column="86" lean-forward="false" selection-start-line="37" selection-start-column="86" selection-end-line="37" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sinus/flat_utility.py" />
     <entry file="file://$PROJECT_DIR$/distorced_sinus_1/meta.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -803,13 +506,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stratosphere/data/2013-11-06_capture-win6.binetflow.labeled.sorted.txt">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stratosphere/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -900,6 +596,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="44" column="26" lean-forward="false" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -924,13 +621,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sinus/evaluate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="83" column="13" lean-forward="false" selection-start-line="83" selection-start-column="13" selection-end-line="83" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/distorced_sinus_1/setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="244">
@@ -952,26 +642,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/distorced_sinus_2/setup.py">
+    <entry file="file://$PROJECT_DIR$/distorced_sinus_2/evaluate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="38" column="31" lean-forward="false" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
-          <folding />
+        <state relative-caret-position="550">
+          <caret line="218" column="19" lean-forward="false" selection-start-line="218" selection-start-column="19" selection-end-line="218" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/distorced_sinus_2/learn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
+        <state relative-caret-position="108">
           <caret line="39" column="23" lean-forward="false" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/distorced_sinus_2/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="38" column="31" lean-forward="false" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sinus/evaluate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/distorced_sinus_2/evaluate.py">
+    <entry file="file://$PROJECT_DIR$/stratosphere/data/zeus_capture.txt">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="0">
+          <caret line="0" column="84" lean-forward="false" selection-start-line="0" selection-start-column="78" selection-end-line="0" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stratosphere/data/stratosphere_utility.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="198" column="31" lean-forward="false" selection-start-line="198" selection-start-column="31" selection-end-line="198" selection-end-column="31" />
+        <state relative-caret-position="324">
+          <caret line="56" column="26" lean-forward="true" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
           <folding />
         </state>
       </provider>
