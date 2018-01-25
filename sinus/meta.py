@@ -10,6 +10,9 @@ Meta-informations about the sinus experiment.
 # directory where all the test cases are stored
 BASEDIR = "/home/nino/PycharmProjects/rai_experiments/sinus/data"
 
+# directory where all the results of the experiments are stored
+EXPDIR = "/home/nino/PycharmProjects/rai_experiments/sinus/experiments"
+
 # length of the training flat waves
 TRAINL = 1000
 
@@ -33,6 +36,9 @@ PERIOD = 4
 
 # alphabet size (used by learn.py)
 ASIZE = 2
+
+# number of states used in HMM models (we know in advance it is 7)
+STATES = 10
 
 # symbol bounds
 ABOUNDS = {"0": (-float("inf"), 0.), "1": (0., float("inf"))}

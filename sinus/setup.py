@@ -21,17 +21,28 @@ from os.path import exists, join
 
 
 def clean():
-    # cleans everything removing all files
+    # cleans everything removing all data files
     for root, dirs, files in walk(mt.BASEDIR, topdown=False):
         for name in files:
             remove(join(root, name))
         for name in dirs:
             rmdir(join(root, name))
+    # cleans everything removing all results files
+    for root, dirs, files in walk(mt.EXPDIR, topdown=False):
+        for name in files:
+            remove(join(root, name))
+        for name in dirs:
+            rmdir(join(root, name))
+    # removes the base directories
+    if exists(mt.BASEDIR):
+        rmdir(mt.BASEDIR)
+    if exists(mt.EXPDIR):
+        rmdir(mt.EXPDIR)
 
 
 def setup():
     # for each test case:
-    # 1) create the directory
+    # 1) create the directories
     # 2) generate train and test flat waves
     # 3) generate train file for RAI
     # 4) generate train file for RTI+ with alphabet criterion
@@ -44,15 +55,25 @@ def setup():
     rti.WSIZE = mt.WSIZE
     rti.TRAINL = mt.TRAINL
     rti.ASIZE = mt.ASIZE
+    # creating the base directories
+    if not exists(mt.BASEDIR):
+        mkdir(mt.BASEDIR)
+    if not exists(mt.EXPDIR):
+        mkdir(mt.EXPDIR)
+    # now we can start
     for tc in mt.TCIDS:
         print "setting up test case", tc
         # setting a specific seed for this test case (for the flat sequences generation)
         su.SEED += tc
-        # setting the base directory for test case tc
+        # setting the data directory for test case tc
         tcdir = mt.BASEDIR + "/" + str(tc)
-        # creating the test case directory
+        # creating the test case data directory
         if not exists(tcdir):
             mkdir(tcdir)
+        # creating the test case experiments directory
+        expdir = mt.EXPDIR + "/" + str(tc)
+        if not exists(expdir):
+            mkdir(expdir)
         # setting the training paths
         flat = tcdir + "/train.flat"
         raisw = tcdir + "/rai.sw"
@@ -72,4 +93,4 @@ def setup():
 
 if __name__ == "__main__":
     clean()
-    setup(requires=['matplotlib'])
+    setup()

@@ -10,6 +10,9 @@ Meta-informations about the sinus experiment.
 # directory where all the test cases are stored
 BASEDIR = "/home/nino/PycharmProjects/rai_experiments/stratosphere/data"
 
+# directory where all the results of the experiments are stored
+EXPDIR = "/home/nino/PycharmProjects/rai_experiments/stratosphere/experiments"
+
 # whole capture file
 WHOLE = "/home/nino/PycharmProjects/rai_experiments/stratosphere/zeus_capture.txt"
 

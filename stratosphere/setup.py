@@ -22,12 +22,23 @@ from random import randint, seed
 
 
 def clean():
-    # cleans everything removing all files
+    # cleans everything removing all data files
     for root, dirs, files in walk(mt.BASEDIR, topdown=False):
         for name in files:
             remove(join(root, name))
         for name in dirs:
             rmdir(join(root, name))
+    # cleans everything removing all results files
+    for root, dirs, files in walk(mt.EXPDIR, topdown=False):
+        for name in files:
+            remove(join(root, name))
+        for name in dirs:
+            rmdir(join(root, name))
+    # removes the base directories
+    if exists(mt.BASEDIR):
+        rmdir(mt.BASEDIR)
+    if exists(mt.EXPDIR):
+        rmdir(mt.EXPDIR)
 
 
 def get_starting_points():
@@ -39,7 +50,6 @@ def get_starting_points():
     base_ts = base_tr + 10000
     # computing training and testing starting points for each test case
     return [(base_tr + tc * mt.TRAINL, base_ts + tc * mt.TESTL) for tc in mt.TCIDS]
-
 
 
 def setup():
@@ -57,15 +67,25 @@ def setup():
     rti.WSIZE = mt.WSIZE
     rti.TRAINL = mt.TRAINL
     rti.ASIZE = mt.ASIZE
+    # creating the base directories
+    if not exists(mt.BASEDIR):
+        mkdir(mt.BASEDIR)
+    if not exists(mt.EXPDIR):
+        mkdir(mt.EXPDIR)
+    # now we can start
     for tc in mt.TCIDS:
         print "setting up test case", tc
         # setting the base directory for test case tc
         tcdir = mt.BASEDIR + "/" + str(tc)
         # getting the starting points for the flat sequences for this test case
         tr_start, ts_start = spoints[tc][0], spoints[tc][1]
-        # creating the test case directory
+        # creating the test case data directory
         if not exists(tcdir):
             mkdir(tcdir)
+        # creating the test case experiments directory
+        expdir = mt.EXPDIR + "/" + str(tc)
+        if not exists(expdir):
+            mkdir(expdir)
         # setting the training paths
         flat = tcdir + "/train.flat"
         raisw = tcdir + "/rai.sw"

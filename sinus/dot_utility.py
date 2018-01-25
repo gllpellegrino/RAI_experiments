@@ -62,6 +62,22 @@ def export_md(rt, path):
         eh.write("\n}")
 
 
+# exports a model learned with GaussianHHM of hmmlearn library
+def export_hmm_md(hmm, path):
+    with open(path, "w") as eh:
+        # getting the data
+        trans = hmm.transmat_
+        init = hmm.startprob_
+        means = hmm.means_
+        # priting them in dot format
+        eh.write("digraph a {")
+        for s0 in xrange(len(means)):
+            eh.write("\n" + str(s0) + " [shape=circle, label=\"" + str(s0) + "\\nmu=" + str(means[s0][0]) + "\\np0=" + str(init[s0]) + "\"];")
+            for s1 in xrange(len(means)):
+                eh.write("\n\t" + str(s0) + " -> " + str(s1) + " [label=\"" + str(trans[s0][s1]) + "\"];")
+        eh.write("\n}")
+
+
 if __name__ == "__main__":
     m = load_md("/home/nino/PycharmProjects/rai_experiments/sinus/data/0/rai.dot")
     print m
