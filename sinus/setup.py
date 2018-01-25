@@ -94,3 +94,4 @@ def setup():
 if __name__ == "__main__":
     clean()
     setup()
+    # rai.export_sw("/home/nino/PycharmProjects/rai_experiments/sinus/data/0/train.flat", 8, "/home/nino/Scrivania/train0.rai")

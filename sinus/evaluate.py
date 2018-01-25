@@ -300,6 +300,50 @@ def evaluate():
         print "\n"
 
 
+def evaluate_single(test_case):
+    # ------------------------------------------------------------------------------
+    rai_path = mt.EXPDIR + "/" + str(test_case) + "/rai.res"
+    rtisy_path = mt.EXPDIR + "/" + str(test_case) + "/rtisy.res"
+    rtitm_path = mt.EXPDIR + "/" + str(test_case) + "/rtitm.res"
+    pers_path = mt.EXPDIR + "/" + str(test_case) + "/pers.res"
+    arma_path = mt.EXPDIR + "/" + str(test_case) + "/arma.res"
+    arima_path = mt.EXPDIR + "/" + str(test_case) + "/arima.res"
+    hmm_path = mt.EXPDIR + "/" + str(test_case) + "/hmm.res"
+    gold_path = mt.BASEDIR + "/" + str(test_case) + "/test.flat"
+    # ------------------------------------------------------------------------------
+    res = {}
+    # gold
+    gl = [vl for vl in su.load_flat(gold_path)]
+    # persistence
+    pr = [vl for vl in su.load_flat(pers_path)]
+    res["Persistence"] = {"MAE": mae(pr, gl), "MAPE": mape(pr, gl), "RMSE": rmse(pr, gl)}
+    # RAI
+    ra = [vl for vl in su.load_flat(rai_path)]
+    res["RAI"] = {"MAE": mae(ra, gl), "MAPE": mape(ra, gl), "RMSE": rmse(ra, gl)}
+    # RTI+ symbols
+    rs = [vl for vl in su.load_flat(rtisy_path)]
+    res["RTI+ symbols"] = {"MAE": mae(rs, gl), "MAPE": mape(rs, gl), "RMSE": rmse(rs, gl)}
+    # RTI+ time
+    rt = [vl for vl in su.load_flat(rtitm_path)]
+    res["RTI+ time"] = {"MAE": mae(rt, gl), "MAPE": mape(rt, gl), "RMSE": rmse(rt, gl)}
+    # ARIMA
+    ai = [vl for vl in su.load_flat(arima_path)]
+    res["ARIMA"] = {"MAE": mae(ai, gl), "MAPE": mape(ai, gl), "RMSE": rmse(ai, gl)}
+    # ARMA
+    am = [vl for vl in su.load_flat(arma_path)]
+    res["ARMA"] = {"MAE": mae(am, gl), "MAPE": mape(am, gl), "RMSE": rmse(am, gl)}
+    # HMM
+    hm = [vl for vl in su.load_flat(hmm_path)]
+    res["HMM"] = {"MAE": mae(hm, gl), "MAPE": mape(hm, gl), "RMSE": rmse(hm, gl)}
+    # ------------------------------------------------------------------------------
+    for tn in res:
+        print "\n", tn
+        for pm in res[tn]:
+            if pm == "MAE":
+                print pm, res[tn][pm]
+    print "\n"
+
+
 if __name__ == "__main__":
     f1 = "/home/nino/PycharmProjects/rai_experiments/sinus/data/0/test.flat"
     f2 = "/home/nino/PycharmProjects/rai_experiments/sinus/data/0/train.flat"
@@ -311,5 +355,6 @@ if __name__ == "__main__":
     # plot(0)
     # for v in hmm(f2, f1):
     #     print v
-    store_predictions()
+    # store_predictions()
     # evaluate()
+    evaluate_single(0)

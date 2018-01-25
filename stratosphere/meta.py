@@ -41,6 +41,9 @@ PRECISION = 1
 
 WSIZE = PERIOD * 4
 
+# components (states) used in evaluation.py by HMM
+STATES = 50
+
 # alphabet bounds
 ABOUNDS = {"0": (-float("inf"), 24), "1": (24, 350), "2": (350, float("inf"))}
 

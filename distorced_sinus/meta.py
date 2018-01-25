@@ -37,6 +37,9 @@ PERIOD = 4
 # alphabet size (used by learn.py)
 ASIZE = 2
 
+# number of states used in HMM models (we know in advance it is 7)
+STATES = 10
+
 # symbol bounds
 ABOUNDS = {"0": (-float("inf"), .0), "1": (.0, float("inf"))}
 

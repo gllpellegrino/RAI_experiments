@@ -311,5 +311,5 @@ if __name__ == "__main__":
     # plot(0)
     # for v in hmm(f2, f1):
     #     print v
-    store_predictions()
-    # evaluate()
+    # store_predictions()
+    evaluate()
