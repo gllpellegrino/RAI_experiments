@@ -1,28 +1,28 @@
 SOLUTION:
 TIME-THRESHOLDS: 0 0 0
 MAX-TIME: 0
-0 prob: symbol= 566 419  time= 985 0 0 0 
+0 prob: symbol= 524 469  time= 993 0 0 0 
 0 1 [0, 0]->1
 0 0 [0, 0]->2
-1 prob: symbol= 320 246  time= 566 0 0 0 
+1 prob: symbol= 327 264  time= 591 0 0 0 
 1 1 [0, 0]->3
-1 0 [0, 0]->2
-2 prob: symbol= 392 520  time= 912 0 0 0 
-2 1 [0, 0]->5
+1 0 [0, 0]->5
+2 prob: symbol= 233 236  time= 469 0 0 0 
+2 1 [0, 0]->6
 2 0 [0, 0]->4
-3 prob: symbol= 73 247  time= 320 0 0 0 
-3 1 [0, 0]->7
-3 0 [0, 0]->2
-4 prob: symbol= 3301 0  time= 3301 0 0 0 
-4 1 [0, 0]->5
+3 prob: symbol= 67 260  time= 327 0 0 0 
+3 1 [0, 0]->1
+3 0 [0, 0]->5
+4 prob: symbol= 1361 16  time= 1377 0 0 0 
+4 1 [0, 0]->6
 4 0 [0, 0]->-1
-5 prob: symbol= 3447 0  time= 3447 0 0 0 
-5 1 [0, 0]->6
-5 0 [0, 0]->-1
-6 prob: symbol= 949 2252  time= 3201 0 0 0 
+5 prob: symbol= 6 1366  time= 1372 0 0 0 
+5 1 [0, 0]->-1
+5 0 [0, 0]->4
+6 prob: symbol= 1468 17  time= 1485 0 0 0 
 6 1 [0, 0]->7
-6 0 [0, 0]->7
-7 prob: symbol= 0 3028  time= 3028 0 0 0 
-7 1 [0, 0]->-1
-7 0 [0, 0]->4
-SCORE = 7679.79
+6 0 [0, 0]->-1
+7 prob: symbol= 143 1073  time= 1216 0 0 0 
+7 1 [0, 0]->6
+7 0 [0, 0]->5
+SCORE = 4974.42

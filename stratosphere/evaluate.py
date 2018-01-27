@@ -86,7 +86,7 @@ def hmm(flat_path_tr, flat_path_ts, flat_path_out):
     sw_tr = np.array(sw_tr).flatten().reshape(n_tr * mt.WSIZE, 1)
     len_tr = [mt.WSIZE for _ in xrange(n_tr)]
     # training
-    md = GaussianHMM(mt.STATES, covariance_type="diag", n_iter=1).fit(sw_tr, len_tr)
+    md = GaussianHMM(mt.STATES, covariance_type="diag", n_iter=1000).fit(sw_tr, len_tr)
     # testing
     with open(flat_path_out, "w") as oh:
         for i in xrange(mt.WSIZE):
@@ -108,7 +108,7 @@ def rairti(dot_path, flat_path_ts, flat_path_out):
     md = du.load_md(dot_path)
     with open(flat_path_out, "w") as oh:
         first_w = True
-        for window in ru.windows_getter(flat_path_ts, mt.PERIOD):
+        for window in ru.windows_getter(flat_path_ts, mt.WSIZE):
             sta = 0
             if first_w:
                 first_w = False
@@ -144,10 +144,10 @@ def sarimax(flat_path_tr, flat_path_ts, i, flat_path_out):
     tr = [vl for vl in su.load_flat(flat_path_tr)]
     ts = [vl for vl in su.load_flat(flat_path_ts)]
     # training
-    md1 = SARIMAX(tr, order=(mt.PERIOD, d, 1), enforce_stationarity=False, enforce_invertibility=False)
+    md1 = SARIMAX(tr, order=(mt.WSIZE, d, 1), enforce_stationarity=False, enforce_invertibility=False)
     rs1 = md1.fit(disp=0)
     # testing
-    md2 = SARIMAX(ts, order=(mt.PERIOD, d, 1), enforce_stationarity=False, enforce_invertibility=False)
+    md2 = SARIMAX(ts, order=(mt.WSIZE, d, 1), enforce_stationarity=False, enforce_invertibility=False)
     rs2 = md2.filter(rs1.params)
     # assembling the results
     with open(flat_path_out, "w") as oh:

@@ -32,7 +32,7 @@ TCIDS = [tc for tc in xrange(TESTCASES)]
 PERIOD = 4
 
 # window size for generating the slided files (used in setup.py and learn.py)
-WSIZE = PERIOD * 4
+WSIZE = 8
 
 # alphabet size (used by learn.py)
 ASIZE = 8

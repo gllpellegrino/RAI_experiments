@@ -1,19 +1,19 @@
 digraph DFA {
-0 [shape=circle, label="0\n0.02431"];
-	0 -> 513 [label="]-Infinity, -0.00850]"];
-	0 -> 1393 [label="]-0.00850, Infinity["];
-1393 [shape=circle, label="1393\n0.02113"];
-	1393 -> 506 [label="]-Infinity, -0.00850]"];
-	1393 -> 4378 [label="]-0.00850, Infinity["];
-4378 [shape=circle, label="4378\n-0.59332"];
-	4378 -> 506 [label="]-Infinity, Infinity["];
-506 [shape=circle, label="506\n-0.61149"];
-	506 -> 1666 [label="]-Infinity, Infinity["];
-1666 [shape=circle, label="1666\n0.67910"];
-	1666 -> 1386 [label="]-Infinity, Infinity["];
-1386 [shape=circle, label="1386\n0.64807"];
-	1386 -> 4378 [label="]-Infinity, Infinity["];
-513 [shape=circle, label="513\n0.02705"];
-	513 -> 1666 [label="]-Infinity, -0.00850]"];
-	513 -> 1386 [label="]-0.00850, Infinity["];
+0 [shape=circle, label="0\n0.02504"];
+	0 -> 257 [label="]-Infinity, 0.00850]"];
+	0 -> 1117 [label="]0.00850, Infinity["];
+1117 [shape=circle, label="1117\n0.01621"];
+	1117 -> 254 [label="]-Infinity, 0.00850]"];
+	1117 -> 1114 [label="]0.00850, Infinity["];
+1114 [shape=circle, label="1114\n-0.60955"];
+	1114 -> 254 [label="]-Infinity, Infinity["];
+254 [shape=circle, label="254\n-0.61606"];
+	254 -> 834 [label="]-Infinity, Infinity["];
+834 [shape=circle, label="834\n0.67218"];
+	834 -> 2018 [label="]-Infinity, Infinity["];
+2018 [shape=circle, label="2018\n0.63009"];
+	2018 -> 1114 [label="]-Infinity, Infinity["];
+257 [shape=circle, label="257\n0.03398"];
+	257 -> 834 [label="]-Infinity, -0.02600]"];
+	257 -> 2018 [label="]-0.02600, Infinity["];
 }

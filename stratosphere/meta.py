@@ -11,7 +11,7 @@ Meta-informations about the sinus experiment.
 BASEDIR = "/home/nino/PycharmProjects/rai_experiments/stratosphere/data"
 
 # directory where all the results of the experiments are stored
-EXPDIR = "/home/nino/PycharmProjects/rai_experiments/stratosphere/experiments"
+EXPDIR = "/home/nino/PycharmProjects/rai_experiments/stratosphere/experiments40"
 
 # whole capture file
 WHOLE = "/home/nino/PycharmProjects/rai_experiments/stratosphere/zeus_capture.txt"
@@ -38,10 +38,10 @@ ASIZE = 3
 PRECISION = 1
 
 # window size
-WSIZE = PERIOD * 4
+WSIZE = 40
 
 # components (states) used in evaluation.py by HMM
-STATES = 50
+STATES = 10
 
 # alphabet bounds
 ABOUNDS = {"0": (-float("inf"), 24), "1": (24, 350), "2": (350, float("inf"))}
@@ -80,5 +80,5 @@ RAI_CMD = "/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin/java " \
           "/home/nino/LEMMA/state_merging_regressor/out/production/state_merging_regressor:" \
           "/home/nino/LEMMA/state_merging_regressor/lib/guava-18.0.jar:" \
           "/home/nino/LEMMA/state_merging_regressor/lib/commons-math3-3.6.jar " \
-          "trans.launchers.Stratosphere {TRAIN} {MODEL} {ALPHABET_SIZE} {PREFIX_LENGTH}"
+          "trans.launchers.Sinus {TRAIN} {MODEL} {ALPHABET_SIZE} {PREFIX_LENGTH}"
 

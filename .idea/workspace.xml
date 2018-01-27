@@ -2,16 +2,540 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66c9db45-2388-4e50-853e-88ea47bf58de" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/wind/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/wind/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/wind/evaluate.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/wind/learn.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/wind/meta.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/wind/rijnhaven_utility.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/wind/setup.py" />
-      <change beforePath="$PROJECT_DIR$/.idea/rai_experiments.iml" afterPath="$PROJECT_DIR$/.idea/rai_experiments.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/README.md" afterPath="$PROJECT_DIR$/distorced_sinus/README.md" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/0/rai.dot" afterPath="$PROJECT_DIR$/distorced_sinus/data/0/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/0/rai.sw" afterPath="$PROJECT_DIR$/distorced_sinus/data/0/rai.sw" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/0/rtisy.dot" afterPath="$PROJECT_DIR$/distorced_sinus/data/0/rtisy.dot" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/0/rtisy.rti" afterPath="$PROJECT_DIR$/distorced_sinus/data/0/rtisy.rti" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/0/rtisy.sw" afterPath="$PROJECT_DIR$/distorced_sinus/data/0/rtisy.sw" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/0/rtitm.dot" afterPath="$PROJECT_DIR$/distorced_sinus/data/0/rtitm.dot" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/0/rtitm.rti" afterPath="$PROJECT_DIR$/distorced_sinus/data/0/rtitm.rti" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/0/rtitm.sw" afterPath="$PROJECT_DIR$/distorced_sinus/data/0/rtitm.sw" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/0/test.flat" afterPath="$PROJECT_DIR$/distorced_sinus/data/0/test.flat" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/0/train.flat" afterPath="$PROJECT_DIR$/distorced_sinus/data/0/train.flat" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/1/rai.dot" afterPath="$PROJECT_DIR$/distorced_sinus/data/1/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/1/rai.sw" afterPath="$PROJECT_DIR$/distorced_sinus/data/1/rai.sw" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/1/rtisy.dot" afterPath="$PROJECT_DIR$/distorced_sinus/data/1/rtisy.dot" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/1/rtisy.rti" afterPath="$PROJECT_DIR$/distorced_sinus/data/1/rtisy.rti" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/1/rtisy.sw" afterPath="$PROJECT_DIR$/distorced_sinus/data/1/rtisy.sw" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/1/rtitm.dot" afterPath="$PROJECT_DIR$/distorced_sinus/data/1/rtitm.dot" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/1/rtitm.rti" afterPath="$PROJECT_DIR$/distorced_sinus/data/1/rtitm.rti" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/1/rtitm.sw" afterPath="$PROJECT_DIR$/distorced_sinus/data/1/rtitm.sw" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/1/test.flat" afterPath="$PROJECT_DIR$/distorced_sinus/data/1/test.flat" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/1/train.flat" afterPath="$PROJECT_DIR$/distorced_sinus/data/1/train.flat" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/2/rai.dot" afterPath="$PROJECT_DIR$/distorced_sinus/data/2/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/2/rai.sw" afterPath="$PROJECT_DIR$/distorced_sinus/data/2/rai.sw" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/2/rtisy.dot" afterPath="$PROJECT_DIR$/distorced_sinus/data/2/rtisy.dot" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/2/rtisy.rti" afterPath="$PROJECT_DIR$/distorced_sinus/data/2/rtisy.rti" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/2/rtisy.sw" afterPath="$PROJECT_DIR$/distorced_sinus/data/2/rtisy.sw" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/2/rtitm.dot" afterPath="$PROJECT_DIR$/distorced_sinus/data/2/rtitm.dot" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/2/rtitm.rti" afterPath="$PROJECT_DIR$/distorced_sinus/data/2/rtitm.rti" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/2/rtitm.sw" afterPath="$PROJECT_DIR$/distorced_sinus/data/2/rtitm.sw" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/2/test.flat" afterPath="$PROJECT_DIR$/distorced_sinus/data/2/test.flat" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/2/train.flat" afterPath="$PROJECT_DIR$/distorced_sinus/data/2/train.flat" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/3/rai.dot" afterPath="$PROJECT_DIR$/distorced_sinus/data/3/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/3/rai.sw" afterPath="$PROJECT_DIR$/distorced_sinus/data/3/rai.sw" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/3/rtisy.dot" afterPath="$PROJECT_DIR$/distorced_sinus/data/3/rtisy.dot" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/3/rtisy.rti" afterPath="$PROJECT_DIR$/distorced_sinus/data/3/rtisy.rti" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/3/rtisy.sw" afterPath="$PROJECT_DIR$/distorced_sinus/data/3/rtisy.sw" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/3/rtitm.dot" afterPath="$PROJECT_DIR$/distorced_sinus/data/3/rtitm.dot" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/3/rtitm.rti" afterPath="$PROJECT_DIR$/distorced_sinus/data/3/rtitm.rti" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/3/rtitm.sw" afterPath="$PROJECT_DIR$/distorced_sinus/data/3/rtitm.sw" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/3/test.flat" afterPath="$PROJECT_DIR$/distorced_sinus/data/3/test.flat" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/3/train.flat" afterPath="$PROJECT_DIR$/distorced_sinus/data/3/train.flat" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/4/rai.dot" afterPath="$PROJECT_DIR$/distorced_sinus/data/4/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/4/rai.sw" afterPath="$PROJECT_DIR$/distorced_sinus/data/4/rai.sw" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/4/rtisy.dot" afterPath="$PROJECT_DIR$/distorced_sinus/data/4/rtisy.dot" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/4/rtisy.rti" afterPath="$PROJECT_DIR$/distorced_sinus/data/4/rtisy.rti" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/4/rtisy.sw" afterPath="$PROJECT_DIR$/distorced_sinus/data/4/rtisy.sw" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/4/rtitm.dot" afterPath="$PROJECT_DIR$/distorced_sinus/data/4/rtitm.dot" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/4/rtitm.rti" afterPath="$PROJECT_DIR$/distorced_sinus/data/4/rtitm.rti" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/4/rtitm.sw" afterPath="$PROJECT_DIR$/distorced_sinus/data/4/rtitm.sw" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/4/test.flat" afterPath="$PROJECT_DIR$/distorced_sinus/data/4/test.flat" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/4/train.flat" afterPath="$PROJECT_DIR$/distorced_sinus/data/4/train.flat" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/5/rai.dot" afterPath="$PROJECT_DIR$/distorced_sinus/data/5/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/5/rai.sw" afterPath="$PROJECT_DIR$/distorced_sinus/data/5/rai.sw" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/5/rtisy.dot" afterPath="$PROJECT_DIR$/distorced_sinus/data/5/rtisy.dot" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/5/rtisy.rti" afterPath="$PROJECT_DIR$/distorced_sinus/data/5/rtisy.rti" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/5/rtisy.sw" afterPath="$PROJECT_DIR$/distorced_sinus/data/5/rtisy.sw" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/5/rtitm.dot" afterPath="$PROJECT_DIR$/distorced_sinus/data/5/rtitm.dot" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/5/rtitm.rti" afterPath="$PROJECT_DIR$/distorced_sinus/data/5/rtitm.rti" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/5/rtitm.sw" afterPath="$PROJECT_DIR$/distorced_sinus/data/5/rtitm.sw" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/5/test.flat" afterPath="$PROJECT_DIR$/distorced_sinus/data/5/test.flat" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/5/train.flat" afterPath="$PROJECT_DIR$/distorced_sinus/data/5/train.flat" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/6/rai.dot" afterPath="$PROJECT_DIR$/distorced_sinus/data/6/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/6/rai.sw" afterPath="$PROJECT_DIR$/distorced_sinus/data/6/rai.sw" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/6/rtisy.dot" afterPath="$PROJECT_DIR$/distorced_sinus/data/6/rtisy.dot" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/6/rtisy.rti" afterPath="$PROJECT_DIR$/distorced_sinus/data/6/rtisy.rti" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/6/rtisy.sw" afterPath="$PROJECT_DIR$/distorced_sinus/data/6/rtisy.sw" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/6/rtitm.dot" afterPath="$PROJECT_DIR$/distorced_sinus/data/6/rtitm.dot" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/6/rtitm.rti" afterPath="$PROJECT_DIR$/distorced_sinus/data/6/rtitm.rti" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/6/rtitm.sw" afterPath="$PROJECT_DIR$/distorced_sinus/data/6/rtitm.sw" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/6/test.flat" afterPath="$PROJECT_DIR$/distorced_sinus/data/6/test.flat" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/6/train.flat" afterPath="$PROJECT_DIR$/distorced_sinus/data/6/train.flat" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/7/rai.dot" afterPath="$PROJECT_DIR$/distorced_sinus/data/7/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/7/rai.sw" afterPath="$PROJECT_DIR$/distorced_sinus/data/7/rai.sw" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/7/rtisy.dot" afterPath="$PROJECT_DIR$/distorced_sinus/data/7/rtisy.dot" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/7/rtisy.rti" afterPath="$PROJECT_DIR$/distorced_sinus/data/7/rtisy.rti" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/7/rtisy.sw" afterPath="$PROJECT_DIR$/distorced_sinus/data/7/rtisy.sw" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/7/rtitm.dot" afterPath="$PROJECT_DIR$/distorced_sinus/data/7/rtitm.dot" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/7/rtitm.rti" afterPath="$PROJECT_DIR$/distorced_sinus/data/7/rtitm.rti" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/7/rtitm.sw" afterPath="$PROJECT_DIR$/distorced_sinus/data/7/rtitm.sw" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/7/test.flat" afterPath="$PROJECT_DIR$/distorced_sinus/data/7/test.flat" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/7/train.flat" afterPath="$PROJECT_DIR$/distorced_sinus/data/7/train.flat" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/8/rai.dot" afterPath="$PROJECT_DIR$/distorced_sinus/data/8/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/8/rai.sw" afterPath="$PROJECT_DIR$/distorced_sinus/data/8/rai.sw" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/8/rtisy.dot" afterPath="$PROJECT_DIR$/distorced_sinus/data/8/rtisy.dot" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/8/rtisy.rti" afterPath="$PROJECT_DIR$/distorced_sinus/data/8/rtisy.rti" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/8/rtisy.sw" afterPath="$PROJECT_DIR$/distorced_sinus/data/8/rtisy.sw" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/8/rtitm.dot" afterPath="$PROJECT_DIR$/distorced_sinus/data/8/rtitm.dot" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/8/rtitm.rti" afterPath="$PROJECT_DIR$/distorced_sinus/data/8/rtitm.rti" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/8/rtitm.sw" afterPath="$PROJECT_DIR$/distorced_sinus/data/8/rtitm.sw" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/8/test.flat" afterPath="$PROJECT_DIR$/distorced_sinus/data/8/test.flat" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/8/train.flat" afterPath="$PROJECT_DIR$/distorced_sinus/data/8/train.flat" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/9/rai.dot" afterPath="$PROJECT_DIR$/distorced_sinus/data/9/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/9/rai.sw" afterPath="$PROJECT_DIR$/distorced_sinus/data/9/rai.sw" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/9/rtisy.dot" afterPath="$PROJECT_DIR$/distorced_sinus/data/9/rtisy.dot" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/9/rtisy.rti" afterPath="$PROJECT_DIR$/distorced_sinus/data/9/rtisy.rti" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/9/rtisy.sw" afterPath="$PROJECT_DIR$/distorced_sinus/data/9/rtisy.sw" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/9/rtitm.dot" afterPath="$PROJECT_DIR$/distorced_sinus/data/9/rtitm.dot" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/9/rtitm.rti" afterPath="$PROJECT_DIR$/distorced_sinus/data/9/rtitm.rti" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/9/rtitm.sw" afterPath="$PROJECT_DIR$/distorced_sinus/data/9/rtitm.sw" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/9/test.flat" afterPath="$PROJECT_DIR$/distorced_sinus/data/9/test.flat" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/data/9/train.flat" afterPath="$PROJECT_DIR$/distorced_sinus/data/9/train.flat" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/evaluate.py" afterPath="$PROJECT_DIR$/distorced_sinus/evaluate.py" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/0/arima.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/0/arima.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/0/arma.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/0/arma.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/0/hmm.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/0/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/0/pers.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/0/pers.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/0/rai.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/0/rai.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/0/rtisy.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/0/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/0/rtitm.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/0/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/1/arima.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/1/arima.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/1/arma.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/1/arma.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/1/hmm.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/1/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/1/pers.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/1/pers.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/1/rai.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/1/rai.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/1/rtisy.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/1/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/1/rtitm.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/1/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/2/arima.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/2/arima.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/2/arma.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/2/arma.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/2/hmm.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/2/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/2/pers.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/2/pers.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/2/rai.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/2/rai.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/2/rtisy.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/2/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/2/rtitm.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/2/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/3/arima.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/3/arima.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/3/arma.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/3/arma.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/3/hmm.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/3/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/3/pers.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/3/pers.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/3/rai.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/3/rai.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/3/rtisy.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/3/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/3/rtitm.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/3/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/4/arima.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/4/arima.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/4/arma.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/4/arma.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/4/hmm.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/4/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/4/pers.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/4/pers.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/4/rai.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/4/rai.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/4/rtisy.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/4/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/4/rtitm.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/4/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/5/arima.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/5/arima.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/5/arma.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/5/arma.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/5/hmm.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/5/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/5/pers.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/5/pers.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/5/rai.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/5/rai.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/5/rtisy.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/5/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/5/rtitm.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/5/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/6/arima.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/6/arima.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/6/arma.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/6/arma.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/6/hmm.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/6/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/6/pers.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/6/pers.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/6/rai.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/6/rai.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/6/rtisy.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/6/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/6/rtitm.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/6/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/7/arima.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/7/arima.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/7/arma.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/7/arma.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/7/hmm.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/7/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/7/pers.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/7/pers.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/7/rai.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/7/rai.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/7/rtisy.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/7/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/7/rtitm.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/7/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/8/arima.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/8/arima.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/8/arma.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/8/arma.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/8/hmm.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/8/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/8/pers.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/8/pers.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/8/rai.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/8/rai.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/8/rtisy.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/8/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/8/rtitm.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/8/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/9/arima.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/9/arima.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/9/arma.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/9/arma.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/9/hmm.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/9/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/9/pers.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/9/pers.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/9/rai.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/9/rai.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/9/rtisy.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/9/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/experiments/9/rtitm.res" afterPath="$PROJECT_DIR$/distorced_sinus/experiments/9/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/gmon.out" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/meta.py" afterPath="$PROJECT_DIR$/distorced_sinus/meta.py" />
+      <change beforePath="$PROJECT_DIR$/distorced_sinus/sinus_utility.py" afterPath="$PROJECT_DIR$/distorced_sinus/sinus_utility.py" />
+      <change beforePath="$PROJECT_DIR$/sinus/canc.dot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/sinus/canc.eps" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/0/rai.dot" afterPath="$PROJECT_DIR$/sinus/data/0/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/0/rai.sw" afterPath="$PROJECT_DIR$/sinus/data/0/rai.sw" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/0/rtisy.dot" afterPath="$PROJECT_DIR$/sinus/data/0/rtisy.dot" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/0/rtisy.rti" afterPath="$PROJECT_DIR$/sinus/data/0/rtisy.rti" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/0/rtisy.sw" afterPath="$PROJECT_DIR$/sinus/data/0/rtisy.sw" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/0/rtitm.dot" afterPath="$PROJECT_DIR$/sinus/data/0/rtitm.dot" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/0/rtitm.rti" afterPath="$PROJECT_DIR$/sinus/data/0/rtitm.rti" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/0/rtitm.sw" afterPath="$PROJECT_DIR$/sinus/data/0/rtitm.sw" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/1/rai.dot" afterPath="$PROJECT_DIR$/sinus/data/1/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/1/rai.sw" afterPath="$PROJECT_DIR$/sinus/data/1/rai.sw" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/1/rtisy.dot" afterPath="$PROJECT_DIR$/sinus/data/1/rtisy.dot" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/1/rtisy.rti" afterPath="$PROJECT_DIR$/sinus/data/1/rtisy.rti" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/1/rtisy.sw" afterPath="$PROJECT_DIR$/sinus/data/1/rtisy.sw" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/1/rtitm.dot" afterPath="$PROJECT_DIR$/sinus/data/1/rtitm.dot" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/1/rtitm.rti" afterPath="$PROJECT_DIR$/sinus/data/1/rtitm.rti" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/1/rtitm.sw" afterPath="$PROJECT_DIR$/sinus/data/1/rtitm.sw" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/2/rai.dot" afterPath="$PROJECT_DIR$/sinus/data/2/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/2/rai.sw" afterPath="$PROJECT_DIR$/sinus/data/2/rai.sw" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/2/rtisy.dot" afterPath="$PROJECT_DIR$/sinus/data/2/rtisy.dot" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/2/rtisy.rti" afterPath="$PROJECT_DIR$/sinus/data/2/rtisy.rti" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/2/rtisy.sw" afterPath="$PROJECT_DIR$/sinus/data/2/rtisy.sw" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/2/rtitm.dot" afterPath="$PROJECT_DIR$/sinus/data/2/rtitm.dot" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/2/rtitm.rti" afterPath="$PROJECT_DIR$/sinus/data/2/rtitm.rti" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/2/rtitm.sw" afterPath="$PROJECT_DIR$/sinus/data/2/rtitm.sw" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/3/rai.dot" afterPath="$PROJECT_DIR$/sinus/data/3/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/3/rai.sw" afterPath="$PROJECT_DIR$/sinus/data/3/rai.sw" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/3/rtisy.dot" afterPath="$PROJECT_DIR$/sinus/data/3/rtisy.dot" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/3/rtisy.rti" afterPath="$PROJECT_DIR$/sinus/data/3/rtisy.rti" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/3/rtisy.sw" afterPath="$PROJECT_DIR$/sinus/data/3/rtisy.sw" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/3/rtitm.dot" afterPath="$PROJECT_DIR$/sinus/data/3/rtitm.dot" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/3/rtitm.rti" afterPath="$PROJECT_DIR$/sinus/data/3/rtitm.rti" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/3/rtitm.sw" afterPath="$PROJECT_DIR$/sinus/data/3/rtitm.sw" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/4/rai.dot" afterPath="$PROJECT_DIR$/sinus/data/4/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/4/rai.sw" afterPath="$PROJECT_DIR$/sinus/data/4/rai.sw" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/4/rtisy.dot" afterPath="$PROJECT_DIR$/sinus/data/4/rtisy.dot" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/4/rtisy.rti" afterPath="$PROJECT_DIR$/sinus/data/4/rtisy.rti" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/4/rtisy.sw" afterPath="$PROJECT_DIR$/sinus/data/4/rtisy.sw" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/4/rtitm.dot" afterPath="$PROJECT_DIR$/sinus/data/4/rtitm.dot" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/4/rtitm.rti" afterPath="$PROJECT_DIR$/sinus/data/4/rtitm.rti" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/4/rtitm.sw" afterPath="$PROJECT_DIR$/sinus/data/4/rtitm.sw" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/5/rai.dot" afterPath="$PROJECT_DIR$/sinus/data/5/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/5/rai.sw" afterPath="$PROJECT_DIR$/sinus/data/5/rai.sw" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/5/rtisy.dot" afterPath="$PROJECT_DIR$/sinus/data/5/rtisy.dot" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/5/rtisy.rti" afterPath="$PROJECT_DIR$/sinus/data/5/rtisy.rti" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/5/rtisy.sw" afterPath="$PROJECT_DIR$/sinus/data/5/rtisy.sw" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/5/rtitm.dot" afterPath="$PROJECT_DIR$/sinus/data/5/rtitm.dot" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/5/rtitm.rti" afterPath="$PROJECT_DIR$/sinus/data/5/rtitm.rti" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/5/rtitm.sw" afterPath="$PROJECT_DIR$/sinus/data/5/rtitm.sw" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/6/rai.dot" afterPath="$PROJECT_DIR$/sinus/data/6/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/6/rai.sw" afterPath="$PROJECT_DIR$/sinus/data/6/rai.sw" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/6/rtisy.dot" afterPath="$PROJECT_DIR$/sinus/data/6/rtisy.dot" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/6/rtisy.rti" afterPath="$PROJECT_DIR$/sinus/data/6/rtisy.rti" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/6/rtisy.sw" afterPath="$PROJECT_DIR$/sinus/data/6/rtisy.sw" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/6/rtitm.dot" afterPath="$PROJECT_DIR$/sinus/data/6/rtitm.dot" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/6/rtitm.rti" afterPath="$PROJECT_DIR$/sinus/data/6/rtitm.rti" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/6/rtitm.sw" afterPath="$PROJECT_DIR$/sinus/data/6/rtitm.sw" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/7/rai.dot" afterPath="$PROJECT_DIR$/sinus/data/7/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/7/rai.sw" afterPath="$PROJECT_DIR$/sinus/data/7/rai.sw" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/7/rtisy.dot" afterPath="$PROJECT_DIR$/sinus/data/7/rtisy.dot" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/7/rtisy.rti" afterPath="$PROJECT_DIR$/sinus/data/7/rtisy.rti" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/7/rtisy.sw" afterPath="$PROJECT_DIR$/sinus/data/7/rtisy.sw" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/7/rtitm.dot" afterPath="$PROJECT_DIR$/sinus/data/7/rtitm.dot" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/7/rtitm.rti" afterPath="$PROJECT_DIR$/sinus/data/7/rtitm.rti" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/7/rtitm.sw" afterPath="$PROJECT_DIR$/sinus/data/7/rtitm.sw" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/8/rai.dot" afterPath="$PROJECT_DIR$/sinus/data/8/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/8/rai.sw" afterPath="$PROJECT_DIR$/sinus/data/8/rai.sw" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/8/rtisy.dot" afterPath="$PROJECT_DIR$/sinus/data/8/rtisy.dot" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/8/rtisy.rti" afterPath="$PROJECT_DIR$/sinus/data/8/rtisy.rti" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/8/rtisy.sw" afterPath="$PROJECT_DIR$/sinus/data/8/rtisy.sw" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/8/rtitm.dot" afterPath="$PROJECT_DIR$/sinus/data/8/rtitm.dot" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/8/rtitm.rti" afterPath="$PROJECT_DIR$/sinus/data/8/rtitm.rti" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/8/rtitm.sw" afterPath="$PROJECT_DIR$/sinus/data/8/rtitm.sw" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/9/rai.dot" afterPath="$PROJECT_DIR$/sinus/data/9/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/9/rai.sw" afterPath="$PROJECT_DIR$/sinus/data/9/rai.sw" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/9/rtisy.dot" afterPath="$PROJECT_DIR$/sinus/data/9/rtisy.dot" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/9/rtisy.rti" afterPath="$PROJECT_DIR$/sinus/data/9/rtisy.rti" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/9/rtisy.sw" afterPath="$PROJECT_DIR$/sinus/data/9/rtisy.sw" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/9/rtitm.dot" afterPath="$PROJECT_DIR$/sinus/data/9/rtitm.dot" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/9/rtitm.rti" afterPath="$PROJECT_DIR$/sinus/data/9/rtitm.rti" />
+      <change beforePath="$PROJECT_DIR$/sinus/data/9/rtitm.sw" afterPath="$PROJECT_DIR$/sinus/data/9/rtitm.sw" />
+      <change beforePath="$PROJECT_DIR$/sinus/evaluate.py" afterPath="$PROJECT_DIR$/sinus/evaluate.py" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/0/arima.res" afterPath="$PROJECT_DIR$/sinus/experiments/0/arima.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/0/arma.res" afterPath="$PROJECT_DIR$/sinus/experiments/0/arma.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/0/hmm.res" afterPath="$PROJECT_DIR$/sinus/experiments/0/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/0/rai.res" afterPath="$PROJECT_DIR$/sinus/experiments/0/rai.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/0/rtisy.res" afterPath="$PROJECT_DIR$/sinus/experiments/0/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/0/rtitm.res" afterPath="$PROJECT_DIR$/sinus/experiments/0/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/1/arima.res" afterPath="$PROJECT_DIR$/sinus/experiments/1/arima.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/1/arma.res" afterPath="$PROJECT_DIR$/sinus/experiments/1/arma.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/1/hmm.res" afterPath="$PROJECT_DIR$/sinus/experiments/1/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/1/rai.res" afterPath="$PROJECT_DIR$/sinus/experiments/1/rai.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/1/rtisy.res" afterPath="$PROJECT_DIR$/sinus/experiments/1/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/1/rtitm.res" afterPath="$PROJECT_DIR$/sinus/experiments/1/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/2/arima.res" afterPath="$PROJECT_DIR$/sinus/experiments/2/arima.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/2/arma.res" afterPath="$PROJECT_DIR$/sinus/experiments/2/arma.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/2/hmm.res" afterPath="$PROJECT_DIR$/sinus/experiments/2/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/2/rai.res" afterPath="$PROJECT_DIR$/sinus/experiments/2/rai.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/2/rtisy.res" afterPath="$PROJECT_DIR$/sinus/experiments/2/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/2/rtitm.res" afterPath="$PROJECT_DIR$/sinus/experiments/2/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/3/arima.res" afterPath="$PROJECT_DIR$/sinus/experiments/3/arima.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/3/arma.res" afterPath="$PROJECT_DIR$/sinus/experiments/3/arma.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/3/hmm.res" afterPath="$PROJECT_DIR$/sinus/experiments/3/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/3/rai.res" afterPath="$PROJECT_DIR$/sinus/experiments/3/rai.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/3/rtisy.res" afterPath="$PROJECT_DIR$/sinus/experiments/3/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/3/rtitm.res" afterPath="$PROJECT_DIR$/sinus/experiments/3/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/4/arima.res" afterPath="$PROJECT_DIR$/sinus/experiments/4/arima.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/4/arma.res" afterPath="$PROJECT_DIR$/sinus/experiments/4/arma.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/4/hmm.res" afterPath="$PROJECT_DIR$/sinus/experiments/4/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/4/rai.res" afterPath="$PROJECT_DIR$/sinus/experiments/4/rai.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/4/rtisy.res" afterPath="$PROJECT_DIR$/sinus/experiments/4/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/4/rtitm.res" afterPath="$PROJECT_DIR$/sinus/experiments/4/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/5/arima.res" afterPath="$PROJECT_DIR$/sinus/experiments/5/arima.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/5/arma.res" afterPath="$PROJECT_DIR$/sinus/experiments/5/arma.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/5/hmm.res" afterPath="$PROJECT_DIR$/sinus/experiments/5/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/5/rai.res" afterPath="$PROJECT_DIR$/sinus/experiments/5/rai.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/5/rtisy.res" afterPath="$PROJECT_DIR$/sinus/experiments/5/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/5/rtitm.res" afterPath="$PROJECT_DIR$/sinus/experiments/5/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/6/arima.res" afterPath="$PROJECT_DIR$/sinus/experiments/6/arima.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/6/arma.res" afterPath="$PROJECT_DIR$/sinus/experiments/6/arma.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/6/hmm.res" afterPath="$PROJECT_DIR$/sinus/experiments/6/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/6/rai.res" afterPath="$PROJECT_DIR$/sinus/experiments/6/rai.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/6/rtisy.res" afterPath="$PROJECT_DIR$/sinus/experiments/6/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/6/rtitm.res" afterPath="$PROJECT_DIR$/sinus/experiments/6/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/7/arima.res" afterPath="$PROJECT_DIR$/sinus/experiments/7/arima.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/7/arma.res" afterPath="$PROJECT_DIR$/sinus/experiments/7/arma.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/7/hmm.res" afterPath="$PROJECT_DIR$/sinus/experiments/7/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/7/rai.res" afterPath="$PROJECT_DIR$/sinus/experiments/7/rai.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/7/rtisy.res" afterPath="$PROJECT_DIR$/sinus/experiments/7/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/7/rtitm.res" afterPath="$PROJECT_DIR$/sinus/experiments/7/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/8/arima.res" afterPath="$PROJECT_DIR$/sinus/experiments/8/arima.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/8/arma.res" afterPath="$PROJECT_DIR$/sinus/experiments/8/arma.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/8/hmm.res" afterPath="$PROJECT_DIR$/sinus/experiments/8/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/8/rai.res" afterPath="$PROJECT_DIR$/sinus/experiments/8/rai.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/8/rtisy.res" afterPath="$PROJECT_DIR$/sinus/experiments/8/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/8/rtitm.res" afterPath="$PROJECT_DIR$/sinus/experiments/8/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/9/arima.res" afterPath="$PROJECT_DIR$/sinus/experiments/9/arima.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/9/arma.res" afterPath="$PROJECT_DIR$/sinus/experiments/9/arma.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/9/hmm.res" afterPath="$PROJECT_DIR$/sinus/experiments/9/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/9/rai.res" afterPath="$PROJECT_DIR$/sinus/experiments/9/rai.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/9/rtisy.res" afterPath="$PROJECT_DIR$/sinus/experiments/9/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/experiments/9/rtitm.res" afterPath="$PROJECT_DIR$/sinus/experiments/9/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/sinus/meta.py" afterPath="$PROJECT_DIR$/sinus/meta.py" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/data/0/rai.dot" afterPath="$PROJECT_DIR$/stratosphere/data/0/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/data/1/rai.dot" afterPath="$PROJECT_DIR$/stratosphere/data/1/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/data/2/rai.dot" afterPath="$PROJECT_DIR$/stratosphere/data/2/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/data/3/rai.dot" afterPath="$PROJECT_DIR$/stratosphere/data/3/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/data/4/rai.dot" afterPath="$PROJECT_DIR$/stratosphere/data/4/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/data/5/rai.dot" afterPath="$PROJECT_DIR$/stratosphere/data/5/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/data/6/rai.dot" afterPath="$PROJECT_DIR$/stratosphere/data/6/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/data/7/rai.dot" afterPath="$PROJECT_DIR$/stratosphere/data/7/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/evaluate.py" afterPath="$PROJECT_DIR$/stratosphere/evaluate.py" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/0/arima.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/0/arima.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/0/arma.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/0/arma.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/0/hmm.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/0/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/0/rai.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/0/rai.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/0/rtisy.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/0/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/0/rtitm.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/0/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/1/arima.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/1/arima.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/1/arma.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/1/arma.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/1/hmm.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/1/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/1/rai.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/1/rai.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/1/rtisy.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/1/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/1/rtitm.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/1/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/2/arima.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/2/arima.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/2/arma.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/2/arma.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/2/hmm.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/2/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/2/rai.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/2/rai.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/2/rtisy.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/2/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/2/rtitm.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/2/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/3/arima.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/3/arima.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/3/arma.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/3/arma.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/3/hmm.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/3/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/3/rai.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/3/rai.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/3/rtisy.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/3/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/3/rtitm.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/3/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/4/arima.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/4/arima.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/4/arma.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/4/arma.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/4/hmm.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/4/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/4/rai.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/4/rai.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/4/rtisy.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/4/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/4/rtitm.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/4/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/5/arima.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/5/arima.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/5/arma.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/5/arma.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/5/hmm.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/5/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/5/rai.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/5/rai.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/5/rtisy.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/5/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/5/rtitm.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/5/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/6/arima.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/6/arima.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/6/arma.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/6/arma.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/6/hmm.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/6/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/6/rai.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/6/rai.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/6/rtisy.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/6/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/6/rtitm.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/6/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/7/arima.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/7/arima.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/7/arma.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/7/arma.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/7/hmm.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/7/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/7/rai.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/7/rai.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/7/rtisy.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/7/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/7/rtitm.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/7/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/8/arima.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/8/arima.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/8/arma.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/8/arma.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/8/hmm.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/8/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/8/rai.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/8/rai.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/8/rtisy.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/8/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/8/rtitm.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/8/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/9/arima.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/9/arima.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/9/arma.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/9/arma.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/9/hmm.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/9/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/9/rai.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/9/rai.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/9/rtisy.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/9/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/experiments/9/rtitm.res" afterPath="$PROJECT_DIR$/stratosphere/experiments/9/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/stratosphere/gmon.out" afterPath="$PROJECT_DIR$/stratosphere/gmon.out" />
       <change beforePath="$PROJECT_DIR$/stratosphere/meta.py" afterPath="$PROJECT_DIR$/stratosphere/meta.py" />
+      <change beforePath="$PROJECT_DIR$/wind/data/0/rai.dot" afterPath="$PROJECT_DIR$/wind/data/0/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/wind/data/0/rai.sw" afterPath="$PROJECT_DIR$/wind/data/0/rai.sw" />
+      <change beforePath="$PROJECT_DIR$/wind/data/0/rtisy.dot" afterPath="$PROJECT_DIR$/wind/data/0/rtisy.dot" />
+      <change beforePath="$PROJECT_DIR$/wind/data/0/rtisy.rti" afterPath="$PROJECT_DIR$/wind/data/0/rtisy.rti" />
+      <change beforePath="$PROJECT_DIR$/wind/data/0/rtisy.sw" afterPath="$PROJECT_DIR$/wind/data/0/rtisy.sw" />
+      <change beforePath="$PROJECT_DIR$/wind/data/0/rtitm.dot" afterPath="$PROJECT_DIR$/wind/data/0/rtitm.dot" />
+      <change beforePath="$PROJECT_DIR$/wind/data/0/rtitm.rti" afterPath="$PROJECT_DIR$/wind/data/0/rtitm.rti" />
+      <change beforePath="$PROJECT_DIR$/wind/data/0/rtitm.sw" afterPath="$PROJECT_DIR$/wind/data/0/rtitm.sw" />
+      <change beforePath="$PROJECT_DIR$/wind/data/1/rai.dot" afterPath="$PROJECT_DIR$/wind/data/1/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/wind/data/1/rai.sw" afterPath="$PROJECT_DIR$/wind/data/1/rai.sw" />
+      <change beforePath="$PROJECT_DIR$/wind/data/1/rtisy.dot" afterPath="$PROJECT_DIR$/wind/data/1/rtisy.dot" />
+      <change beforePath="$PROJECT_DIR$/wind/data/1/rtisy.rti" afterPath="$PROJECT_DIR$/wind/data/1/rtisy.rti" />
+      <change beforePath="$PROJECT_DIR$/wind/data/1/rtisy.sw" afterPath="$PROJECT_DIR$/wind/data/1/rtisy.sw" />
+      <change beforePath="$PROJECT_DIR$/wind/data/1/rtitm.dot" afterPath="$PROJECT_DIR$/wind/data/1/rtitm.dot" />
+      <change beforePath="$PROJECT_DIR$/wind/data/1/rtitm.rti" afterPath="$PROJECT_DIR$/wind/data/1/rtitm.rti" />
+      <change beforePath="$PROJECT_DIR$/wind/data/1/rtitm.sw" afterPath="$PROJECT_DIR$/wind/data/1/rtitm.sw" />
+      <change beforePath="$PROJECT_DIR$/wind/data/2/rai.dot" afterPath="$PROJECT_DIR$/wind/data/2/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/wind/data/2/rai.sw" afterPath="$PROJECT_DIR$/wind/data/2/rai.sw" />
+      <change beforePath="$PROJECT_DIR$/wind/data/2/rtisy.dot" afterPath="$PROJECT_DIR$/wind/data/2/rtisy.dot" />
+      <change beforePath="$PROJECT_DIR$/wind/data/2/rtisy.rti" afterPath="$PROJECT_DIR$/wind/data/2/rtisy.rti" />
+      <change beforePath="$PROJECT_DIR$/wind/data/2/rtisy.sw" afterPath="$PROJECT_DIR$/wind/data/2/rtisy.sw" />
+      <change beforePath="$PROJECT_DIR$/wind/data/2/rtitm.dot" afterPath="$PROJECT_DIR$/wind/data/2/rtitm.dot" />
+      <change beforePath="$PROJECT_DIR$/wind/data/2/rtitm.rti" afterPath="$PROJECT_DIR$/wind/data/2/rtitm.rti" />
+      <change beforePath="$PROJECT_DIR$/wind/data/2/rtitm.sw" afterPath="$PROJECT_DIR$/wind/data/2/rtitm.sw" />
+      <change beforePath="$PROJECT_DIR$/wind/data/3/rai.dot" afterPath="$PROJECT_DIR$/wind/data/3/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/wind/data/3/rai.sw" afterPath="$PROJECT_DIR$/wind/data/3/rai.sw" />
+      <change beforePath="$PROJECT_DIR$/wind/data/3/rtisy.dot" afterPath="$PROJECT_DIR$/wind/data/3/rtisy.dot" />
+      <change beforePath="$PROJECT_DIR$/wind/data/3/rtisy.rti" afterPath="$PROJECT_DIR$/wind/data/3/rtisy.rti" />
+      <change beforePath="$PROJECT_DIR$/wind/data/3/rtisy.sw" afterPath="$PROJECT_DIR$/wind/data/3/rtisy.sw" />
+      <change beforePath="$PROJECT_DIR$/wind/data/3/rtitm.dot" afterPath="$PROJECT_DIR$/wind/data/3/rtitm.dot" />
+      <change beforePath="$PROJECT_DIR$/wind/data/3/rtitm.rti" afterPath="$PROJECT_DIR$/wind/data/3/rtitm.rti" />
+      <change beforePath="$PROJECT_DIR$/wind/data/3/rtitm.sw" afterPath="$PROJECT_DIR$/wind/data/3/rtitm.sw" />
+      <change beforePath="$PROJECT_DIR$/wind/data/4/rai.dot" afterPath="$PROJECT_DIR$/wind/data/4/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/wind/data/4/rai.sw" afterPath="$PROJECT_DIR$/wind/data/4/rai.sw" />
+      <change beforePath="$PROJECT_DIR$/wind/data/4/rtisy.dot" afterPath="$PROJECT_DIR$/wind/data/4/rtisy.dot" />
+      <change beforePath="$PROJECT_DIR$/wind/data/4/rtisy.rti" afterPath="$PROJECT_DIR$/wind/data/4/rtisy.rti" />
+      <change beforePath="$PROJECT_DIR$/wind/data/4/rtisy.sw" afterPath="$PROJECT_DIR$/wind/data/4/rtisy.sw" />
+      <change beforePath="$PROJECT_DIR$/wind/data/4/rtitm.dot" afterPath="$PROJECT_DIR$/wind/data/4/rtitm.dot" />
+      <change beforePath="$PROJECT_DIR$/wind/data/4/rtitm.rti" afterPath="$PROJECT_DIR$/wind/data/4/rtitm.rti" />
+      <change beforePath="$PROJECT_DIR$/wind/data/4/rtitm.sw" afterPath="$PROJECT_DIR$/wind/data/4/rtitm.sw" />
+      <change beforePath="$PROJECT_DIR$/wind/data/5/rai.dot" afterPath="$PROJECT_DIR$/wind/data/5/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/wind/data/5/rai.sw" afterPath="$PROJECT_DIR$/wind/data/5/rai.sw" />
+      <change beforePath="$PROJECT_DIR$/wind/data/5/rtisy.dot" afterPath="$PROJECT_DIR$/wind/data/5/rtisy.dot" />
+      <change beforePath="$PROJECT_DIR$/wind/data/5/rtisy.rti" afterPath="$PROJECT_DIR$/wind/data/5/rtisy.rti" />
+      <change beforePath="$PROJECT_DIR$/wind/data/5/rtisy.sw" afterPath="$PROJECT_DIR$/wind/data/5/rtisy.sw" />
+      <change beforePath="$PROJECT_DIR$/wind/data/5/rtitm.dot" afterPath="$PROJECT_DIR$/wind/data/5/rtitm.dot" />
+      <change beforePath="$PROJECT_DIR$/wind/data/5/rtitm.rti" afterPath="$PROJECT_DIR$/wind/data/5/rtitm.rti" />
+      <change beforePath="$PROJECT_DIR$/wind/data/5/rtitm.sw" afterPath="$PROJECT_DIR$/wind/data/5/rtitm.sw" />
+      <change beforePath="$PROJECT_DIR$/wind/data/6/rai.dot" afterPath="$PROJECT_DIR$/wind/data/6/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/wind/data/6/rai.sw" afterPath="$PROJECT_DIR$/wind/data/6/rai.sw" />
+      <change beforePath="$PROJECT_DIR$/wind/data/6/rtisy.dot" afterPath="$PROJECT_DIR$/wind/data/6/rtisy.dot" />
+      <change beforePath="$PROJECT_DIR$/wind/data/6/rtisy.rti" afterPath="$PROJECT_DIR$/wind/data/6/rtisy.rti" />
+      <change beforePath="$PROJECT_DIR$/wind/data/6/rtisy.sw" afterPath="$PROJECT_DIR$/wind/data/6/rtisy.sw" />
+      <change beforePath="$PROJECT_DIR$/wind/data/6/rtitm.dot" afterPath="$PROJECT_DIR$/wind/data/6/rtitm.dot" />
+      <change beforePath="$PROJECT_DIR$/wind/data/6/rtitm.rti" afterPath="$PROJECT_DIR$/wind/data/6/rtitm.rti" />
+      <change beforePath="$PROJECT_DIR$/wind/data/6/rtitm.sw" afterPath="$PROJECT_DIR$/wind/data/6/rtitm.sw" />
+      <change beforePath="$PROJECT_DIR$/wind/data/7/rai.dot" afterPath="$PROJECT_DIR$/wind/data/7/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/wind/data/7/rai.sw" afterPath="$PROJECT_DIR$/wind/data/7/rai.sw" />
+      <change beforePath="$PROJECT_DIR$/wind/data/7/rtisy.dot" afterPath="$PROJECT_DIR$/wind/data/7/rtisy.dot" />
+      <change beforePath="$PROJECT_DIR$/wind/data/7/rtisy.rti" afterPath="$PROJECT_DIR$/wind/data/7/rtisy.rti" />
+      <change beforePath="$PROJECT_DIR$/wind/data/7/rtisy.sw" afterPath="$PROJECT_DIR$/wind/data/7/rtisy.sw" />
+      <change beforePath="$PROJECT_DIR$/wind/data/7/rtitm.dot" afterPath="$PROJECT_DIR$/wind/data/7/rtitm.dot" />
+      <change beforePath="$PROJECT_DIR$/wind/data/7/rtitm.rti" afterPath="$PROJECT_DIR$/wind/data/7/rtitm.rti" />
+      <change beforePath="$PROJECT_DIR$/wind/data/7/rtitm.sw" afterPath="$PROJECT_DIR$/wind/data/7/rtitm.sw" />
+      <change beforePath="$PROJECT_DIR$/wind/data/8/rai.dot" afterPath="$PROJECT_DIR$/wind/data/8/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/wind/data/8/rai.sw" afterPath="$PROJECT_DIR$/wind/data/8/rai.sw" />
+      <change beforePath="$PROJECT_DIR$/wind/data/8/rtisy.dot" afterPath="$PROJECT_DIR$/wind/data/8/rtisy.dot" />
+      <change beforePath="$PROJECT_DIR$/wind/data/8/rtisy.rti" afterPath="$PROJECT_DIR$/wind/data/8/rtisy.rti" />
+      <change beforePath="$PROJECT_DIR$/wind/data/8/rtisy.sw" afterPath="$PROJECT_DIR$/wind/data/8/rtisy.sw" />
+      <change beforePath="$PROJECT_DIR$/wind/data/8/rtitm.dot" afterPath="$PROJECT_DIR$/wind/data/8/rtitm.dot" />
+      <change beforePath="$PROJECT_DIR$/wind/data/8/rtitm.rti" afterPath="$PROJECT_DIR$/wind/data/8/rtitm.rti" />
+      <change beforePath="$PROJECT_DIR$/wind/data/8/rtitm.sw" afterPath="$PROJECT_DIR$/wind/data/8/rtitm.sw" />
+      <change beforePath="$PROJECT_DIR$/wind/data/9/rai.dot" afterPath="$PROJECT_DIR$/wind/data/9/rai.dot" />
+      <change beforePath="$PROJECT_DIR$/wind/data/9/rai.sw" afterPath="$PROJECT_DIR$/wind/data/9/rai.sw" />
+      <change beforePath="$PROJECT_DIR$/wind/data/9/rtisy.dot" afterPath="$PROJECT_DIR$/wind/data/9/rtisy.dot" />
+      <change beforePath="$PROJECT_DIR$/wind/data/9/rtisy.rti" afterPath="$PROJECT_DIR$/wind/data/9/rtisy.rti" />
+      <change beforePath="$PROJECT_DIR$/wind/data/9/rtisy.sw" afterPath="$PROJECT_DIR$/wind/data/9/rtisy.sw" />
+      <change beforePath="$PROJECT_DIR$/wind/data/9/rtitm.dot" afterPath="$PROJECT_DIR$/wind/data/9/rtitm.dot" />
+      <change beforePath="$PROJECT_DIR$/wind/data/9/rtitm.rti" afterPath="$PROJECT_DIR$/wind/data/9/rtitm.rti" />
+      <change beforePath="$PROJECT_DIR$/wind/data/9/rtitm.sw" afterPath="$PROJECT_DIR$/wind/data/9/rtitm.sw" />
+      <change beforePath="$PROJECT_DIR$/wind/evaluate.py" afterPath="$PROJECT_DIR$/wind/evaluate.py" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/0/arima.res" afterPath="$PROJECT_DIR$/wind/experiments/0/arima.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/0/arma.res" afterPath="$PROJECT_DIR$/wind/experiments/0/arma.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/0/hmm.res" afterPath="$PROJECT_DIR$/wind/experiments/0/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/0/rai.res" afterPath="$PROJECT_DIR$/wind/experiments/0/rai.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/0/rtisy.res" afterPath="$PROJECT_DIR$/wind/experiments/0/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/0/rtitm.res" afterPath="$PROJECT_DIR$/wind/experiments/0/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/1/arima.res" afterPath="$PROJECT_DIR$/wind/experiments/1/arima.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/1/arma.res" afterPath="$PROJECT_DIR$/wind/experiments/1/arma.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/1/hmm.res" afterPath="$PROJECT_DIR$/wind/experiments/1/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/1/rai.res" afterPath="$PROJECT_DIR$/wind/experiments/1/rai.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/1/rtisy.res" afterPath="$PROJECT_DIR$/wind/experiments/1/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/1/rtitm.res" afterPath="$PROJECT_DIR$/wind/experiments/1/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/2/arima.res" afterPath="$PROJECT_DIR$/wind/experiments/2/arima.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/2/arma.res" afterPath="$PROJECT_DIR$/wind/experiments/2/arma.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/2/hmm.res" afterPath="$PROJECT_DIR$/wind/experiments/2/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/2/rai.res" afterPath="$PROJECT_DIR$/wind/experiments/2/rai.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/2/rtisy.res" afterPath="$PROJECT_DIR$/wind/experiments/2/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/2/rtitm.res" afterPath="$PROJECT_DIR$/wind/experiments/2/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/3/arima.res" afterPath="$PROJECT_DIR$/wind/experiments/3/arima.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/3/arma.res" afterPath="$PROJECT_DIR$/wind/experiments/3/arma.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/3/hmm.res" afterPath="$PROJECT_DIR$/wind/experiments/3/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/3/rai.res" afterPath="$PROJECT_DIR$/wind/experiments/3/rai.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/3/rtisy.res" afterPath="$PROJECT_DIR$/wind/experiments/3/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/3/rtitm.res" afterPath="$PROJECT_DIR$/wind/experiments/3/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/4/arima.res" afterPath="$PROJECT_DIR$/wind/experiments/4/arima.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/4/arma.res" afterPath="$PROJECT_DIR$/wind/experiments/4/arma.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/4/hmm.res" afterPath="$PROJECT_DIR$/wind/experiments/4/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/4/rai.res" afterPath="$PROJECT_DIR$/wind/experiments/4/rai.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/4/rtisy.res" afterPath="$PROJECT_DIR$/wind/experiments/4/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/4/rtitm.res" afterPath="$PROJECT_DIR$/wind/experiments/4/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/5/arima.res" afterPath="$PROJECT_DIR$/wind/experiments/5/arima.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/5/arma.res" afterPath="$PROJECT_DIR$/wind/experiments/5/arma.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/5/hmm.res" afterPath="$PROJECT_DIR$/wind/experiments/5/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/5/rai.res" afterPath="$PROJECT_DIR$/wind/experiments/5/rai.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/5/rtisy.res" afterPath="$PROJECT_DIR$/wind/experiments/5/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/5/rtitm.res" afterPath="$PROJECT_DIR$/wind/experiments/5/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/6/arima.res" afterPath="$PROJECT_DIR$/wind/experiments/6/arima.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/6/arma.res" afterPath="$PROJECT_DIR$/wind/experiments/6/arma.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/6/hmm.res" afterPath="$PROJECT_DIR$/wind/experiments/6/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/6/rai.res" afterPath="$PROJECT_DIR$/wind/experiments/6/rai.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/6/rtisy.res" afterPath="$PROJECT_DIR$/wind/experiments/6/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/6/rtitm.res" afterPath="$PROJECT_DIR$/wind/experiments/6/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/7/arima.res" afterPath="$PROJECT_DIR$/wind/experiments/7/arima.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/7/arma.res" afterPath="$PROJECT_DIR$/wind/experiments/7/arma.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/7/hmm.res" afterPath="$PROJECT_DIR$/wind/experiments/7/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/7/rai.res" afterPath="$PROJECT_DIR$/wind/experiments/7/rai.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/7/rtisy.res" afterPath="$PROJECT_DIR$/wind/experiments/7/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/7/rtitm.res" afterPath="$PROJECT_DIR$/wind/experiments/7/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/8/arima.res" afterPath="$PROJECT_DIR$/wind/experiments/8/arima.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/8/arma.res" afterPath="$PROJECT_DIR$/wind/experiments/8/arma.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/8/hmm.res" afterPath="$PROJECT_DIR$/wind/experiments/8/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/8/rai.res" afterPath="$PROJECT_DIR$/wind/experiments/8/rai.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/8/rtisy.res" afterPath="$PROJECT_DIR$/wind/experiments/8/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/8/rtitm.res" afterPath="$PROJECT_DIR$/wind/experiments/8/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/9/arima.res" afterPath="$PROJECT_DIR$/wind/experiments/9/arima.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/9/arma.res" afterPath="$PROJECT_DIR$/wind/experiments/9/arma.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/9/hmm.res" afterPath="$PROJECT_DIR$/wind/experiments/9/hmm.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/9/rai.res" afterPath="$PROJECT_DIR$/wind/experiments/9/rai.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/9/rtisy.res" afterPath="$PROJECT_DIR$/wind/experiments/9/rtisy.res" />
+      <change beforePath="$PROJECT_DIR$/wind/experiments/9/rtitm.res" afterPath="$PROJECT_DIR$/wind/experiments/9/rtitm.res" />
+      <change beforePath="$PROJECT_DIR$/wind/gmon.out" afterPath="$PROJECT_DIR$/wind/gmon.out" />
+      <change beforePath="$PROJECT_DIR$/wind/meta.py" afterPath="$PROJECT_DIR$/wind/meta.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,42 +545,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="evaluate.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stratosphere/evaluate.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="304" column="7" lean-forward="false" selection-start-line="304" selection-start-column="7" selection-end-line="304" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="evaluate.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wind/evaluate.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="358" column="14" lean-forward="true" selection-start-line="358" selection-start-column="14" selection-end-line="358" selection-end-column="14" />
-              <folding>
-                <element signature="e#278#299#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rti_utility.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sinus/rti_utility.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="53" column="40" lean-forward="false" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
-              <folding>
-                <element signature="e#151#183#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -70,12 +559,18 @@
       <find>sy</find>
       <find>States:</find>
       <find>-1:</find>
-      <find>States: 8</find>
       <find>States: 7</find>
       <find>States</find>
-      <find>States: 9</find>
       <find>95.211.9.145</find>
       <find>nan</find>
+      <find>States: 8</find>
+      <find>States: 9</find>
+      <find>case 4</find>
+      <find>case 6</find>
+      <find>States: 1</find>
+      <find>PERIOD</find>
+      <find>PERIO</find>
+      <find>iter</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -87,7 +582,6 @@
         <option value="$PROJECT_DIR$/sinus/data/evaluate.py" />
         <option value="$PROJECT_DIR$/sinus/README.md" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/distorced_sinus/README.md" />
         <option value="$PROJECT_DIR$/distorced_sinus_1/distorced_sinus_utility.py" />
         <option value="$PROJECT_DIR$/sinus/data/flat_utility.py" />
         <option value="$PROJECT_DIR$/sinus/flat_utility.py" />
@@ -110,22 +604,24 @@
         <option value="$PROJECT_DIR$/sinus/canc.py" />
         <option value="$PROJECT_DIR$/distorced_sinus_1/setup.py" />
         <option value="$PROJECT_DIR$/distorced_sinus_1/meta.py" />
-        <option value="$PROJECT_DIR$/sinus/meta.py" />
         <option value="$PROJECT_DIR$/stratosphere/setup.py" />
         <option value="$PROJECT_DIR$/sinus/setup.py" />
-        <option value="$PROJECT_DIR$/sinus/evaluate.py" />
-        <option value="$PROJECT_DIR$/distorced_sinus/meta.py" />
-        <option value="$PROJECT_DIR$/distorced_sinus/evaluate.py" />
-        <option value="$PROJECT_DIR$/stratosphere/evaluate.py" />
         <option value="$PROJECT_DIR$/wind/README.md" />
         <option value="$PROJECT_DIR$/stratosphere/stratosphere_utility.py" />
-        <option value="$PROJECT_DIR$/stratosphere/meta.py" />
-        <option value="$PROJECT_DIR$/wind/meta.py" />
         <option value="$PROJECT_DIR$/wind/setup.py" />
         <option value="$PROJECT_DIR$/sinus/rti_utility.py" />
         <option value="$PROJECT_DIR$/wind/rijnhaven_utility.py" />
         <option value="$PROJECT_DIR$/wind/learn.py" />
+        <option value="$PROJECT_DIR$/distorced_sinus/README.md" />
+        <option value="$PROJECT_DIR$/distorced_sinus/sinus_utility.py" />
+        <option value="$PROJECT_DIR$/distorced_sinus/meta.py" />
+        <option value="$PROJECT_DIR$/distorced_sinus/evaluate.py" />
+        <option value="$PROJECT_DIR$/sinus/meta.py" />
+        <option value="$PROJECT_DIR$/sinus/evaluate.py" />
+        <option value="$PROJECT_DIR$/wind/meta.py" />
         <option value="$PROJECT_DIR$/wind/evaluate.py" />
+        <option value="$PROJECT_DIR$/stratosphere/meta.py" />
+        <option value="$PROJECT_DIR$/stratosphere/evaluate.py" />
       </list>
     </option>
   </component>
@@ -153,7 +649,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -169,19 +664,15 @@
             <path>
               <item name="rai_experiments" type="b2602c69:ProjectViewProjectNode" />
               <item name="rai_experiments" type="462c0819:PsiDirectoryNode" />
-              <item name="wind" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rai_experiments" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rai_experiments" type="462c0819:PsiDirectoryNode" />
-              <item name="wind" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="stratosphere" type="462c0819:PsiDirectoryNode" />
+              <item name="experiments40" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -215,7 +706,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.evaluate">
-    <configuration name="evaluate" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="evaluate (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -228,6 +719,24 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="rai_experiments" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wind/evaluate.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="evaluate" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/stratosphere" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="rai_experiments" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/stratosphere/evaluate.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -251,19 +760,19 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="rijnhaven_utility" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="learn" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/wind" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/stratosphere" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="rai_experiments" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wind/rijnhaven_utility.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/stratosphere/learn.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -276,49 +785,31 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/wind" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="rai_experiments" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wind/setup.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="stratosphere_utility" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/stratosphere" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="rai_experiments" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/stratosphere/stratosphere_utility.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/stratosphere/setup.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.stratosphere_utility" />
-      <item index="1" class="java.lang.String" itemvalue="Python.rijnhaven_utility" />
-      <item index="2" class="java.lang.String" itemvalue="Python.setup" />
-      <item index="3" class="java.lang.String" itemvalue="Python.learn (1)" />
-      <item index="4" class="java.lang.String" itemvalue="Python.evaluate" />
+      <item index="0" class="java.lang.String" itemvalue="Python.evaluate" />
+      <item index="1" class="java.lang.String" itemvalue="Python.learn (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Python.evaluate (1)" />
+      <item index="3" class="java.lang.String" itemvalue="Python.setup" />
+      <item index="4" class="java.lang.String" itemvalue="Python.learn" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.evaluate" />
-        <item index="1" class="java.lang.String" itemvalue="Python.learn (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.learn" />
         <item index="2" class="java.lang.String" itemvalue="Python.setup" />
-        <item index="3" class="java.lang.String" itemvalue="Python.rijnhaven_utility" />
-        <item index="4" class="java.lang.String" itemvalue="Python.stratosphere_utility" />
+        <item index="3" class="java.lang.String" itemvalue="Python.evaluate (1)" />
+        <item index="4" class="java.lang.String" itemvalue="Python.learn (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -339,25 +830,24 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-2" width="1920" height="1082" extended-state="6" />
-    <editor active="true" />
+    <frame x="67" y="25" width="1533" height="875" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25197682" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25099337" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32912722" sideWeight="0.5102794" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32912722" sideWeight="0.49551925" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39537328" sideWeight="0.4897206" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.56046265" sideWeight="0.4897206" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39919356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32912722" sideWeight="0.49551925" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -421,34 +911,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sinus/gmon.out" />
-    <entry file="file://$PROJECT_DIR$/distorced_sinus_2/evaluate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3096">
-          <caret line="180" column="25" lean-forward="false" selection-start-line="180" selection-start-column="25" selection-end-line="180" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/distorced_sinus_2/data/0/test.flat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sinus/canc.eps">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sinus/canc.dot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1368">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/distorced_sinus_2/evaluate.py" />
+    <entry file="file://$PROJECT_DIR$/distorced_sinus_2/data/0/test.flat" />
+    <entry file="file://$PROJECT_DIR$/sinus/canc.eps" />
+    <entry file="file://$PROJECT_DIR$/sinus/canc.dot" />
     <entry file="file://$PROJECT_DIR$/sinus/dot_utility.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1332">
@@ -467,7 +933,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -475,7 +940,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -483,15 +947,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sinus/sinus_utility.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-413">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -499,7 +954,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
           <caret line="44" column="40" lean-forward="false" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -507,47 +961,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/distorced_sinus_2/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/distorced_sinus/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/distorced_sinus/sinus_utility.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1314">
-          <caret line="73" column="53" lean-forward="false" selection-start-line="73" selection-start-column="53" selection-end-line="73" selection-end-column="53" />
-          <folding>
-            <element signature="e#114#143#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/distorced_sinus_2/README.md" />
     <entry file="file://$PROJECT_DIR$/sinus/data/1/rtisy.rti">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -555,17 +976,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sinus/learn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="58" column="31" lean-forward="false" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
-          <folding>
-            <element signature="e#141#164#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -573,75 +983,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sinus/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="42" column="12" lean-forward="false" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="12" />
-          <folding>
-            <element signature="e#375#398#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/distorced_sinus/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/distorced_sinus/learn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="23" column="44" lean-forward="false" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/distorced_sinus/meta.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="40" column="11" lean-forward="false" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sinus/meta.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="40" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sinus/evaluate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="21" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/distorced_sinus/evaluate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="752">
-          <caret line="357" column="25" lean-forward="true" selection-start-line="357" selection-start-column="25" selection-end-line="357" selection-end-column="25" />
-          <folding>
-            <element signature="e#278#299#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stratosphere/learn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="45" column="34" lean-forward="false" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -650,7 +991,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="54">
             <caret line="3" column="130" lean-forward="false" selection-start-line="3" selection-start-column="130" selection-end-line="3" selection-end-column="130" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -660,33 +1000,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
           <caret line="87" column="10" lean-forward="true" selection-start-line="87" selection-start-column="10" selection-end-line="87" selection-end-column="10" />
-          <folding>
-            <element signature="e#124#155#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stratosphere/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="51" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wind/meta.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="34" column="18" lean-forward="false" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stratosphere/meta.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="31" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -694,15 +1007,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-648">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wind/data/0/rai.sw">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17289">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -710,17 +1014,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="299" column="3" lean-forward="false" selection-start-line="299" selection-start-column="0" selection-end-line="299" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sinus/rti_utility.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="53" column="40" lean-forward="false" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
-          <folding>
-            <element signature="e#151#183#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -728,9 +1021,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="33" column="29" lean-forward="false" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
-          <folding>
-            <element signature="e#146#177#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -738,7 +1028,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -746,45 +1035,158 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sinus/rti_utility.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="53" column="40" lean-forward="false" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/distorced_sinus/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="36">
+            <caret line="2" column="130" lean-forward="false" selection-start-line="2" selection-start-column="130" selection-end-line="2" selection-end-column="130" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/distorced_sinus/sinus_utility.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="62" column="11" lean-forward="false" selection-start-line="62" selection-start-column="11" selection-end-line="62" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sinus/sinus_utility.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/distorced_sinus/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="35" column="34" lean-forward="false" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/distorced_sinus/meta.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="31" column="9" lean-forward="false" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/distorced_sinus/learn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="24" column="40" lean-forward="false" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/distorced_sinus/evaluate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="357" column="25" lean-forward="true" selection-start-line="357" selection-start-column="25" selection-end-line="357" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sinus/meta.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="34" column="9" lean-forward="false" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sinus/learn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="44" column="33" lean-forward="false" selection-start-line="44" selection-start-column="33" selection-end-line="44" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sinus/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="62" column="22" lean-forward="false" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sinus/evaluate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="88" column="62" lean-forward="false" selection-start-line="88" selection-start-column="58" selection-end-line="88" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind/data/0/rai.sw">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wind/setup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="85" column="24" lean-forward="false" selection-start-line="85" selection-start-column="24" selection-end-line="85" selection-end-column="24" />
-          <folding>
-            <element signature="e#375#397#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="124">
+          <caret line="78" column="24" lean-forward="false" selection-start-line="78" selection-start-column="24" selection-end-line="78" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wind/learn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="35" column="28" lean-forward="true" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
-          <folding>
-            <element signature="e#141#163#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stratosphere/evaluate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="304" column="7" lean-forward="false" selection-start-line="304" selection-start-column="7" selection-end-line="304" selection-end-column="7" />
-          <folding />
+        <state relative-caret-position="190">
+          <caret line="60" column="35" lean-forward="false" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wind/evaluate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="358" column="14" lean-forward="true" selection-start-line="358" selection-start-column="14" selection-end-line="358" selection-end-column="14" />
-          <folding>
-            <element signature="e#278#299#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="170">
+          <caret line="356" column="17" lean-forward="true" selection-start-line="356" selection-start-column="17" selection-end-line="356" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind/meta.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="34" column="9" lean-forward="false" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stratosphere/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="37" column="26" lean-forward="false" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stratosphere/learn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="47" column="22" lean-forward="false" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stratosphere/evaluate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="314" column="14" lean-forward="false" selection-start-line="314" selection-start-column="14" selection-end-line="314" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stratosphere/meta.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="13" column="79" lean-forward="false" selection-start-line="13" selection-start-column="79" selection-end-line="13" selection-end-column="79" />
+          <folding />
         </state>
       </provider>
     </entry>

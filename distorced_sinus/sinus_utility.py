@@ -38,10 +38,10 @@ def getv(q):
         return sin(radians(d))
     if q == Q2:
         # here is the difference !!
-        d = randint(90, 135)
+        d = randint(90, 180)
         return sin(radians(d))
     if q == Q3:
-        d = randint(135, 270)
+        d = randint(180, 270)
         return sin(radians(d))
     # q == Q4
     d = randint(270, 360)
@@ -54,10 +54,16 @@ def getw(n=1000, startq=None):
     seed(SEED)
     # setting the starting quadrant
     q = startq if startq in QUADRANTS else choice(QUADRANTS)
+    # setting the thresholds to use to restart the signal
+    t2 = getv(Q2)
     # generating the whave
     for _ in xrange(n):
-        yield getv(q)
-        q = (q % len(QUADRANTS)) + 1
+        sv = getv(q)
+        yield sv
+        if q == Q2 and sv > t2:
+            q = Q1
+        else:
+            q = (q % len(QUADRANTS)) + 1
 
 
 # flat sequence loader from path

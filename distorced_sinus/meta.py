@@ -29,7 +29,7 @@ TESTCASES = 10
 TCIDS = [tc for tc in xrange(TESTCASES)]
 
 # window size for generating the slided files (used in setup.py and learn.py)
-WSIZE = 16
+WSIZE = 8
 
 # sinus wave period (used in evaluate.py)
 PERIOD = 4

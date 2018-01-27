@@ -1,4 +1,3 @@
-*First distoced sinus experiment*.
-It is the same of the standard *sinus experiment* in all its parts except one:
-when sampling in the second quadrant, we sample in [0.5, 1] instead of [0, 1].
-The difference with the *second distorced sinus experiment* is that here RTI+ symbolic models do not do anything 
+*Distoced sinus experiment*.
+This experiment is meant to show how RAI detects dependencies of the guards from the prediction values.
+To do so, we set a random threshold in the second quadrant: if the sampled value exceeds the threshold, then we reset the machine.

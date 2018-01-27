@@ -8,13 +8,12 @@ digraph a {
 2 [shape=circle, label="2\n0.0"];
 	2 -> 5 [label="]-Infinity, 0.0]"];
 	2 -> 6 [label="]0.0, Infinity["];
-3 [shape=circle, label="3\n0.644800813008"];
+3 [shape=circle, label="3\n0.641258064516"];
 	3 -> 4 [label="]-Infinity, Infinity["];
-4 [shape=circle, label="4\n0.655439516129"];
-	4 -> 6 [label="]-Infinity, 0.0]"];
-	4 -> 6 [label="]0.0, Infinity["];
-5 [shape=circle, label="5\n-0.646265306122"];
+4 [shape=circle, label="4\n0.658868"];
+	4 -> 6 [label="]-Infinity, Infinity["];
+5 [shape=circle, label="5\n-0.642663967611"];
 	5 -> 3 [label="]-Infinity, Infinity["];
-6 [shape=circle, label="6\n-0.643134146341"];
+6 [shape=circle, label="6\n-0.643887096774"];
 	6 -> 5 [label="]-Infinity, Infinity["];
 }
