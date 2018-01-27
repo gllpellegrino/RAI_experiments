@@ -1,0 +1,24 @@
+digraph a {
+0 [shape=circle, label="0\nI=0.13\nP=0.914"];
+	0 -> 0 [label="0.62"];
+1 [shape=circle, label="1\nI=0.134\nP=1.947"];
+	1 -> 1 [label="0.679"];
+2 [shape=circle, label="2\nI=0.047\nP=3.091"];
+	2 -> 2 [label="0.465"];
+	2 -> 8 [label="0.314"];
+3 [shape=circle, label="3\nI=0.075\nP=1.687"];
+	3 -> 6 [label="0.325"];
+	3 -> 8 [label="0.28"];
+4 [shape=circle, label="4\nI=0.076\nP=0.637"];
+	4 -> 4 [label="0.654"];
+5 [shape=circle, label="5\nI=0.035\nP=4.771"];
+	5 -> 5 [label="0.821"];
+6 [shape=circle, label="6\nI=0.171\nP=1.225"];
+	6 -> 6 [label="0.536"];
+7 [shape=circle, label="7\nI=0.148\nP=1.571"];
+	7 -> 7 [label="0.686"];
+8 [shape=circle, label="8\nI=0.13\nP=2.425"];
+	8 -> 8 [label="0.653"];
+9 [shape=circle, label="9\nI=0.053\nP=3.712"];
+	9 -> 9 [label="0.765"];
+}

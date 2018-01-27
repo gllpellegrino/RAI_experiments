@@ -8,7 +8,7 @@ Meta-informations about the sinus experiment.
 """
 
 # directory where all the test cases are stored
-BASEDIR = "/home/nino/PycharmProjects/rai_experiments/stratosphere/data"
+BASEDIR = "/home/nino/PycharmProjects/rai_experiments/stratosphere/data40"
 
 # directory where all the results of the experiments are stored
 EXPDIR = "/home/nino/PycharmProjects/rai_experiments/stratosphere/experiments40"
@@ -27,9 +27,6 @@ TRAINL = 1000
 
 # length of the testing flat waves
 TESTL = 250
-
-# period
-PERIOD = 10
 
 # alphabet size
 ASIZE = 3
@@ -80,5 +77,5 @@ RAI_CMD = "/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin/java " \
           "/home/nino/LEMMA/state_merging_regressor/out/production/state_merging_regressor:" \
           "/home/nino/LEMMA/state_merging_regressor/lib/guava-18.0.jar:" \
           "/home/nino/LEMMA/state_merging_regressor/lib/commons-math3-3.6.jar " \
-          "trans.launchers.Sinus {TRAIN} {MODEL} {ALPHABET_SIZE} {PREFIX_LENGTH}"
+          "trans.launchers.Sinus {TRAIN} {MODEL} {ALPHABET_SIZE} {PREFIX_LENGTH} > /dev/null"
 

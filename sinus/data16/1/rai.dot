@@ -1,0 +1,19 @@
+digraph DFA {
+0 [shape=circle, label="0\n-0.01726"];
+	0 -> 849 [label="]-Infinity, 0.02600]"];
+	0 -> 385 [label="]0.02600, Infinity["];
+385 [shape=circle, label="385\n-0.03661"];
+	385 -> 1570 [label="]-Infinity, -0.00850]"];
+	385 -> 1274 [label="]-0.00850, Infinity["];
+1274 [shape=circle, label="1274\n-0.68146"];
+	1274 -> 1570 [label="]-Infinity, Infinity["];
+1570 [shape=circle, label="1570\n-0.63789"];
+	1570 -> 842 [label="]-Infinity, Infinity["];
+842 [shape=circle, label="842\n0.61520"];
+	842 -> 906 [label="]-Infinity, Infinity["];
+906 [shape=circle, label="906\n0.58371"];
+	906 -> 1274 [label="]-Infinity, Infinity["];
+849 [shape=circle, label="849\n-0.00122"];
+	849 -> 842 [label="]-Infinity, -0.00850]"];
+	849 -> 906 [label="]-0.00850, Infinity["];
+}

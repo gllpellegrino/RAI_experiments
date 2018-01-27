@@ -10,22 +10,14 @@ Each alternative technique must return a prediction for each value within the te
 """
 
 
-import warnings as wr
-from math import sqrt
 import matplotlib.pyplot as plt
-import numpy as np
 import dot_utility as du
 import rti_utility as ru
-import stratosphere_utility as su
 import stratosphere.meta as mt
-from hmmlearn.hmm import GaussianHMM
-# workaround to ignore the pandas.core.datetools deprecation warning
-from statsmodels import ConvergenceWarning
-wr.simplefilter(action='ignore', category=FutureWarning)
-wr.simplefilter(action='ignore', category=ConvergenceWarning)
-wr.simplefilter(action='ignore', category=DeprecationWarning)
-wr.simplefilter(action='ignore', category=RuntimeWarning)
-from statsmodels.tsa.statespace.sarimax import SARIMAX
+import hmms_utility as hmu
+import sarimax_utility as sxu
+import pickle as pk
+from math import sqrt
 
 
 # ------------------------------------------------------------------------------------------------------------------
@@ -58,6 +50,13 @@ def rmse(prd, obs):
     return sqrt(sm / float(len(prd)))
 
 
+# flat sequence loader from path
+def load_flat(path):
+    with open(path, "r") as fh:
+        for line in fh:
+            yield float(line.strip())
+
+
 # -----------------------------------------------------------------------------------------------------------------
 
 
@@ -65,41 +64,9 @@ def rmse(prd, obs):
 def persistence(flat_path_ts, flat_out_path):
     with open(flat_out_path, "w") as oh:
         prd = 0.
-        for vl in su.load_flat(flat_path_ts):
+        for vl in load_flat(flat_path_ts):
             oh.write(str(prd) + "\n")
             prd = vl
-
-
-# hidden marov models prediction gatherer.
-# based on Qin's code.
-def hmm(flat_path_tr, flat_path_ts, flat_path_out):
-    # assembling the training file as GaussianHMM expects it
-    flat_tr = [vl for vl in su.load_flat(flat_path_tr)]
-    flat_ts = [vl for vl in su.load_flat(flat_path_ts)]
-    sw_tr, sw_ts = [], []
-    n_tr, n_ts = mt.TRAINL - mt.WSIZE + 1, mt.TESTL - mt.WSIZE + 1
-    for i in xrange(n_tr):
-        sw_tr.append(flat_tr[i:i + mt.WSIZE])
-    for i in xrange(n_ts):
-        sw_ts.append(flat_ts[i:i + mt.WSIZE])
-    sw_ts = np.array(sw_ts)
-    sw_tr = np.array(sw_tr).flatten().reshape(n_tr * mt.WSIZE, 1)
-    len_tr = [mt.WSIZE for _ in xrange(n_tr)]
-    # training
-    md = GaussianHMM(mt.STATES, covariance_type="diag", n_iter=1000).fit(sw_tr, len_tr)
-    # testing
-    with open(flat_path_out, "w") as oh:
-        for i in xrange(mt.WSIZE):
-            oh.write(str(0.) + "\n")
-        for i in xrange(n_ts - 1):
-            # probability of states in each time step
-            prob = md.predict_proba(sw_ts[i, :].reshape(mt.WSIZE, 1))
-            prob_next_state = np.dot(prob[-1, :], md.transmat_)
-            # print prob_next_state
-            prd = 0.
-            for j in xrange(mt.STATES):
-                prd += prob_next_state[j] * md.means_[j]
-            oh.write(str(prd[0]) + "\n")
 
 
 # rai and rti only require the flat test file path and a model dot file path.
@@ -131,30 +98,6 @@ def rairti(dot_path, flat_path_ts, flat_path_out):
                 oh.write(str(prd) + "\n")
 
 
-# seasonal arma and arima predictions gatherer.
-# based on Chad Fulton's post in here:
-# https://github.com/statsmodels/statsmodels/issues/2577
-# ---------------------------------------------------------
-# it expects a path to the test flat file,
-# i is a boolean flag to use or not the integration (arima does, arma does not)
-def sarimax(flat_path_tr, flat_path_ts, i, flat_path_out):
-    # setting the integration order
-    d = 1 if i else 0
-    # getting training and testing data
-    tr = [vl for vl in su.load_flat(flat_path_tr)]
-    ts = [vl for vl in su.load_flat(flat_path_ts)]
-    # training
-    md1 = SARIMAX(tr, order=(mt.WSIZE, d, 1), enforce_stationarity=False, enforce_invertibility=False)
-    rs1 = md1.fit(disp=0)
-    # testing
-    md2 = SARIMAX(ts, order=(mt.WSIZE, d, 1), enforce_stationarity=False, enforce_invertibility=False)
-    rs2 = md2.filter(rs1.params)
-    # assembling the results
-    with open(flat_path_out, "w") as oh:
-        for i in xrange(len(ts)):
-            oh.write(str(rs2.predict(i, i)[-1]) + "\n")
-
-
 # utility to plot the predictions for a test case identifier [0 to 9 on sinus]
 def plot(test_case):
     # ------------------------------------------------------------------------------
@@ -167,30 +110,22 @@ def plot(test_case):
     hmm_path = mt.EXPDIR + "/" + str(test_case) + "/hmm.res"
     gold_path = mt.BASEDIR + "/" + str(test_case) + "/test.flat"
     # ------------------------------------------------------------------------------
-    res = {}
     # gold
-    gl = [vl for vl in su.load_flat(gold_path)]
+    gl = [vl for vl in load_flat(gold_path)]
     # persistence
-    pr = [vl for vl in su.load_flat(pers_path)]
-    res["Persistence"] = {"MAE": mae(pr, gl), "MAPE": mape(pr, gl), "RMSE": rmse(pr, gl)}
+    pr = [vl for vl in load_flat(pers_path)]
     # RAI
-    ra = [vl for vl in su.load_flat(rai_path)]
-    res["RAI"] = {"MAE": mae(ra, gl), "MAPE": mape(ra, gl), "RMSE": rmse(ra, gl)}
+    ra = [vl for vl in load_flat(rai_path)]
     # RTI+ symbols
-    rs = [vl for vl in su.load_flat(rtisy_path)]
-    res["RTI+ symbols"] = {"MAE": mae(rs, gl), "MAPE": mape(rs, gl), "RMSE": rmse(rs, gl)}
+    rs = [vl for vl in load_flat(rtisy_path)]
     # RTI+ time
-    rt = [vl for vl in su.load_flat(rtitm_path)]
-    res["RTI+ time"] = {"MAE": mae(rt, gl), "MAPE": mape(rt, gl), "RMSE": rmse(rt, gl)}
+    rt = [vl for vl in load_flat(rtitm_path)]
     # ARIMA
-    ai = [vl for vl in su.load_flat(arima_path)]
-    res["ARIMA"] = {"MAE": mae(ai, gl), "MAPE": mape(ai, gl), "RMSE": rmse(ai, gl)}
+    ai = [vl for vl in load_flat(arima_path)]
     # ARMA
-    am = [vl for vl in su.load_flat(arma_path)]
-    res["ARMA"] = {"MAE": mae(am, gl), "MAPE": mape(am, gl), "RMSE": rmse(am, gl)}
+    am = [vl for vl in load_flat(arma_path)]
     # HMM
-    hm = [vl for vl in su.load_flat(hmm_path)]
-    res["HMM"] = {"MAE": mae(hm, gl), "MAPE": mape(hm, gl), "RMSE": rmse(hm, gl)}
+    hm = [vl for vl in load_flat(hmm_path)]
     # ------------------------------------------------------------------------------
     # now we plot)
     # index
@@ -213,7 +148,6 @@ def plot(test_case):
 # it calls all the evaluation routines, which will store the predictions in flat files
 def store_predictions():
     # setting general parameters for all the utility moduli called in this script
-    su.PRECISION = mt.PRECISION
     ru.PRECISION = mt.PRECISION
     ru.ABOUNDS = mt.ABOUNDS
     ru.ASIZE = mt.ASIZE
@@ -224,10 +158,12 @@ def store_predictions():
         print "storing predictions for test case", tc
         # setting the paths
         flat_path_ts = mt.BASEDIR + "/" + str(tc) + "/test.flat"
-        flat_path_tr = mt.BASEDIR + "/" + str(tc) + "/train.flat"
         rai_dot = mt.BASEDIR + "/" + str(tc) + "/rai.dot"
         rtisy_dot = mt.BASEDIR + "/" + str(tc) + "/rtisy.dot"
         rtitm_dot = mt.BASEDIR + "/" + str(tc) + "/rtitm.dot"
+        arm_md = mt.BASEDIR + "/" + str(tc) + "/arma.bin"
+        ari_md = mt.BASEDIR + "/" + str(tc) + "/arima.bin"
+        hmm_md = mt.BASEDIR + "/" + str(tc) + "/hmm.bin"
         # ----------------------------------------------
         rai_path = mt.EXPDIR + "/" + str(tc) + "/rai.res"
         rtisy_path = mt.EXPDIR + "/" + str(tc) + "/rtisy.res"
@@ -241,14 +177,15 @@ def store_predictions():
         rairti(rai_dot, flat_path_ts, rai_path)
         rairti(rtisy_dot, flat_path_ts, rtisy_path)
         rairti(rtitm_dot, flat_path_ts, rtitm_path)
-        sarimax(flat_path_tr, flat_path_ts, False, arma_path)
-        sarimax(flat_path_tr, flat_path_ts, True, arima_path)
-        hmm(flat_path_tr, flat_path_ts, hmm_path)
+        sxu.evaluate(arm_md, flat_path_ts, arma_path)
+        sxu.evaluate(ari_md, flat_path_ts, arima_path)
+        hmu.evaluate(hmm_md, flat_path_ts, hmm_path)
 
 
 def evaluate():
+    res = {}
+    res_path = mt.EXPDIR + "/results.bin"
     # setting general parameters for all the utility moduli called in this script
-    su.PRECISION = mt.PRECISION
     ru.PRECISION = mt.PRECISION
     ru.ABOUNDS = mt.ABOUNDS
     ru.ASIZE = mt.ASIZE
@@ -257,47 +194,55 @@ def evaluate():
     # -----------------------------------------------------------------------------------
     for tc in mt.TCIDS:
         print "evaluating test case", tc
-        # ------------------------------------------------------------------------------
-        rai_path = mt.EXPDIR + "/" + str(tc) + "/rai.res"
-        rtisy_path = mt.EXPDIR + "/" + str(tc) + "/rtisy.res"
-        rtitm_path = mt.EXPDIR + "/" + str(tc) + "/rtitm.res"
-        pers_path = mt.EXPDIR + "/" + str(tc) + "/pers.res"
-        arma_path = mt.EXPDIR + "/" + str(tc) + "/arma.res"
-        arima_path = mt.EXPDIR + "/" + str(tc) + "/arima.res"
-        hmm_path = mt.EXPDIR + "/" + str(tc) + "/hmm.res"
-        gold_path = mt.BASEDIR + "/" + str(tc) + "/test.flat"
-        # ------------------------------------------------------------------------------
-        res = {}
-        # gold
-        gl = [vl for vl in su.load_flat(gold_path)]
-        # persistence
-        pr = [vl for vl in su.load_flat(pers_path)]
-        res["Persistence"] = {"MAE": mae(pr, gl), "MAPE": mape(pr, gl), "RMSE": rmse(pr, gl)}
-        # RAI
-        ra = [vl for vl in su.load_flat(rai_path)]
-        res["RAI"] = {"MAE": mae(ra, gl), "MAPE": mape(ra, gl), "RMSE": rmse(ra, gl)}
-        # RTI+ symbols
-        rs = [vl for vl in su.load_flat(rtisy_path)]
-        res["RTI+ symbols"] = {"MAE": mae(rs, gl), "MAPE": mape(rs, gl), "RMSE": rmse(rs, gl)}
-        # RTI+ time
-        rt = [vl for vl in su.load_flat(rtitm_path)]
-        res["RTI+ time"] = {"MAE": mae(rt, gl), "MAPE": mape(rt, gl), "RMSE": rmse(rt, gl)}
-        # ARIMA
-        ai = [vl for vl in su.load_flat(arima_path)]
-        res["ARIMA"] = {"MAE": mae(ai, gl), "MAPE": mape(ai, gl), "RMSE": rmse(ai, gl)}
-        # ARMA
-        am = [vl for vl in su.load_flat(arma_path)]
-        res["ARMA"] = {"MAE": mae(am, gl), "MAPE": mape(am, gl), "RMSE": rmse(am, gl)}
-        # HMM
-        hm = [vl for vl in su.load_flat(hmm_path)]
-        res["HMM"] = {"MAE": mae(hm, gl), "MAPE": mape(hm, gl), "RMSE": rmse(hm, gl)}
-        # ------------------------------------------------------------------------------
-        for tn in res:
-            print "\n", tn
-            for pm in res[tn]:
-                if pm == "MAE":
-                    print pm, res[tn][pm]
-        print "\n"
+        res[tc] = evaluate_single(tc)
+    # ------------------------------------------------------------------------------
+    # dumping
+    pk.dump(res, open(res_path, "wb"))
+
+
+def evaluate_single(test_case):
+    # ------------------------------------------------------------------------------
+    rai_path = mt.EXPDIR + "/" + str(test_case) + "/rai.res"
+    rtisy_path = mt.EXPDIR + "/" + str(test_case) + "/rtisy.res"
+    rtitm_path = mt.EXPDIR + "/" + str(test_case) + "/rtitm.res"
+    pers_path = mt.EXPDIR + "/" + str(test_case) + "/pers.res"
+    arma_path = mt.EXPDIR + "/" + str(test_case) + "/arma.res"
+    arima_path = mt.EXPDIR + "/" + str(test_case) + "/arima.res"
+    hmm_path = mt.EXPDIR + "/" + str(test_case) + "/hmm.res"
+    gold_path = mt.BASEDIR + "/" + str(test_case) + "/test.flat"
+    # ------------------------------------------------------------------------------
+    res = {}
+    # gold
+    gl = [vl for vl in load_flat(gold_path)]
+    # persistence
+    pr = [vl for vl in load_flat(pers_path)]
+    res["Persistence"] = {"MAE": mae(pr, gl), "MAPE": mape(pr, gl), "RMSE": rmse(pr, gl)}
+    # RAI
+    ra = [vl for vl in load_flat(rai_path)]
+    res["RAI"] = {"MAE": mae(ra, gl), "MAPE": mape(ra, gl), "RMSE": rmse(ra, gl)}
+    # RTI+ symbols
+    rs = [vl for vl in load_flat(rtisy_path)]
+    res["RTI+ symbols"] = {"MAE": mae(rs, gl), "MAPE": mape(rs, gl), "RMSE": rmse(rs, gl)}
+    # RTI+ time
+    rt = [vl for vl in load_flat(rtitm_path)]
+    res["RTI+ time"] = {"MAE": mae(rt, gl), "MAPE": mape(rt, gl), "RMSE": rmse(rt, gl)}
+    # ARIMA
+    ai = [vl for vl in load_flat(arima_path)]
+    res["ARIMA"] = {"MAE": mae(ai, gl), "MAPE": mape(ai, gl), "RMSE": rmse(ai, gl)}
+    # ARMA
+    am = [vl for vl in load_flat(arma_path)]
+    res["ARMA"] = {"MAE": mae(am, gl), "MAPE": mape(am, gl), "RMSE": rmse(am, gl)}
+    # HMM
+    hm = [vl for vl in load_flat(hmm_path)]
+    res["HMM"] = {"MAE": mae(hm, gl), "MAPE": mape(hm, gl), "RMSE": rmse(hm, gl)}
+    # ------------------------------------------------------------------------------
+    for tn in res:
+        print "\n", tn
+        for pm in res[tn]:
+            if pm == "MAE":
+                print pm, res[tn][pm]
+    print "\n"
+    return res
 
 
 if __name__ == "__main__":
@@ -311,5 +256,6 @@ if __name__ == "__main__":
     # plot(0)
     # for v in hmm(f2, f1):
     #     print v
-    # store_predictions()
+    store_predictions()
     evaluate()
+    # evaluate_single(0)

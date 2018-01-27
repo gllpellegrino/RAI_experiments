@@ -8,10 +8,10 @@ Meta-informations about the sinus experiment.
 """
 
 # directory where all the test cases are stored
-BASEDIR = "/home/nino/PycharmProjects/rai_experiments/distorced_sinus/data"
+BASEDIR = "/home/nino/PycharmProjects/rai_experiments/distorced_sinus/data8"
 
 # directory where all the results of the experiments are stored
-EXPDIR = "/home/nino/PycharmProjects/rai_experiments/distorced_sinus/experiments"
+EXPDIR = "/home/nino/PycharmProjects/rai_experiments/distorced_sinus/experiments8"
 
 # length of the training flat waves
 TRAINL = 1000
@@ -30,9 +30,6 @@ TCIDS = [tc for tc in xrange(TESTCASES)]
 
 # window size for generating the slided files (used in setup.py and learn.py)
 WSIZE = 8
-
-# sinus wave period (used in evaluate.py)
-PERIOD = 4
 
 # alphabet size (used by learn.py)
 ASIZE = 2
@@ -71,5 +68,5 @@ RAI_CMD = "/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin/java " \
           "/home/nino/LEMMA/state_merging_regressor/out/production/state_merging_regressor:" \
           "/home/nino/LEMMA/state_merging_regressor/lib/guava-18.0.jar:" \
           "/home/nino/LEMMA/state_merging_regressor/lib/commons-math3-3.6.jar " \
-          "trans.launchers.Sinus {TRAIN} {MODEL} {ALPHABET_SIZE} {PREFIX_LENGTH}"
+          "trans.launchers.Sinus {TRAIN} {MODEL} {ALPHABET_SIZE} {PREFIX_LENGTH} > /dev/null"
 
